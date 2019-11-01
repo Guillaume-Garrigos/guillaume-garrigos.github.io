@@ -1,0 +1,29 @@
+<div id="featured">
+  <div class="title">
+    <h1>News</h1>
+  </div> <!-- title -->
+  <ul class="style1">
+						
+    {% for post in site.posts limit:site.news.display-max  %}
+    
+      <li>
+        <div>
+          <p class="date">{{ post.date | date: "%b" }}<b>{{ post.date | date: "%d" }}</b>{{ post.date | date: "%Y" }}</p>
+        </div>
+        <div class="news_text">
+          {% if post.image %}
+            <p class="illustration">
+              <img src="/assets/images/posts/{{ post.image }}" alt="" height="{{ site.news.image.height }}" width="{{ site.news.image.width }}"/>
+            </p>
+          {% endif %}
+          <h3>{{ post.title }}</h3>
+          
+          {{ post.content }}
+          
+        </div> <!-- news_text -->
+      </li>
+	  
+    {% endfor %}
+		  
+  </ul>
+</div> <!-- featured -->

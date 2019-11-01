@@ -1,0 +1,24 @@
+# Website global variables
+author: Guillaume Garrigos
+title: Guillaume Garrigos
+description: Associate Professor in Applied Mathematics
+url: "https://guillaume-garrigos.github.io/"
+picture: "/assets/images/me_lab.jpg"
+
+# Colors for the website
+color:
+  background: 
+    back: 202020
+    menu: 444444
+    mainbody: FFFFFF
+  text:
+    main: 6c6c6c
+    link: 2980b9
+    
+# News global variables
+news:
+  image:
+    height: 128
+    width: 192
+  display-max: 8 # this is the number of news shown on the front page
+  

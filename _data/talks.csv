@@ -1,0 +1,48 @@
+date,event,institute,city,country,comment,url
+2019-08-07,ICCOPT,Technical University,Berlin,Germany,,https://iccopt2019.berlin/
+2019-06-21,"Séminaire Modélisation, Optimisation, Dynamique ",XLIM,Limoges,,,https://indico.math.cnrs.fr/category/36/
+2019-05-22,Machine Learning Seminar,LCSL,Genova,Italy,,https://corsi.unige.it/10852/news/983-ml-seminars-optimization-in-inverse-problems-guillaume-garrigos
+2019-05-13,Biennale de la SMAI,,Guidel,,,http://smai.emath.fr/smai2019/programme_detaille.php
+2019-04-17,AISTATS,,Okinawa,Japan,Poster,https://www.aistats.org/aistats2019/
+2019-03-21,Groupe de Travail Modélisation,LPSM,Paris,,,https://www.lpsm.paris/semoa/gdt
+2019-02-21,Science communication,Université de Paris,Paris,,,https://docs.google.com/presentation/d/1EzDXQNbdn46Nhtio7nHLlFliu2IlJma6UPId6Oy8eAM/present?usp=sharing
+2019-02-18,Séminaire Parisien de Statistique,IHP,Paris,,,https://sites.google.com/site/semstats/annee-2018-2019
+2019-02-14,Séminaire d’Analyse non linéaire et Optimisation,LMA,Avignon,,,https://math.univ-avignon.fr/seminaires/seminaire-danalyse-non-lineaire-optimisation/
+2018-09-03,European Signal Processing Conference (EUSIPCO),,Roma,Italy,Poster,http://www.eusipco2018.org/
+2018-07-01,International Symposium on Mathematical Programming (ISMP),IMB,Bordeaux,,,https://ismp2018.sciencesconf.org/
+2018-06-05,SIAM Conference on Imaging Science,,Bologna,Italy,,https://www.siam-is18.dm.unibo.it/
+2018-05-21,Inverse Problems: Modeling and Simulation conference,,Malta,Malta,,http://www.ipms-conference.org/ipms2018/index.php
+2018-05-05,Journée Parcimonie et Applications du GdR MIA,IMB,Bordeaux,,,http://gdr-mia.math.cnrs.fr/events/parcimonie-18/
+2018-04-16,"Séminaire Signal, Statistique et Apprentissage",Telecom,Paris,,,http://www.tsi.telecom-paristech.fr/ssa/
+2018-03-28,Journées SMAI-MODE,,Grenoble,,Best talk award,http://smai-mode2018.imag.fr/
+2018-02-20,Séminaire commun de Statistique P6-P7,Paris Diderot,Paris,,,http://www.lpsm.paris/agenda/seminaires-gdt/statp6p7/
+2018-02-07,Séminaire Images Optimisation et Probabilités,IMB,Bordeaux,,,https://www.math.u-bordeaux.fr/imb/seminaire-image-optimisation-et-probabilites
+2018-01-29,Machine Learning Seminar,LCSL,Genova,Italy,,http://lcsl.mit.edu/#/events/seminars
+2018-01-23,Séminaire du Centre de Vision Numérique,Centrale Supélec,Paris,,,http://www.centralesupelec.fr/fr/centre-de-vision-numerique-cvn
+2018-01-15,Mathematics and Image Analysis conference,Humboldt University,Berlin,Germany,Poster,https://www.wias-berlin.de/workshops/MIA2018/
+2017-12-14,Workshop on Dynamics and Algorithms in Convex Optimization,Universidad de Chile,Santiago,Chile,,http://eventos.cmm.uchile.cl/daco2017/
+2017-12-11,V-Coloquio,Pontifica Universidad Catolica de Valparaiso,Valparaiso,Chile,,http://doctoradomat.uv.cl/index.php/v-coloquio-v2/
+2017-12-07,Séminaire LJK-Probabilités & Statistique,LJK,Grenoble,,,https://www-ljk.imag.fr/Seminars/seminaires-ljk-probabilites_-_statistique.html
+2017-11-18,"Workshop on Gradient dynamics, convergence and related topics",UPMC,Paris,,,#
+2017-10-17,Journées du GDR MOA-MIA,IMB,Bordeaux,,,http://gdrmoa.math.cnrs.fr/activites/journees-annuelles-gdr-moa-mia-2017/
+2017-10-17,Optimization 2017,,Lisboa,Portugal,,http://optimization2017.fc.ul.pt/
+2017-07-05,Journées Franco-Chiliennes d'Optimisation,IMT,Toulouse,,,https://www.irit.fr/JFCO/
+2017-02-14,Séminaire SIERRA,INRIA,Paris,,,http://www.di.ens.fr/sierra/
+2017-02-09,Séminaire Mathématiques de l'apprentissage,IMT,Toulouse,,,https://www.math.univ-toulouse.fr/spip.php?rubrique123
+2016-12-19,Seminario del Departamento de Matematica,Universidad Santa Maria,Valparaiso,Chile,,http://www.eventos.usm.cl/evento/seminario-descent-methods-in-convex-optimization-going-beyond-the-worst-case-analysis/
+2016-12-14,Seminar of Optimization and Equilibrium,CMM,Santiago,Chile,,http://www.cmm.uchile.cl/?p=29683
+2016-12-10,NIPS,,Barcelona,Spain,Poster,https://nips.cc/
+2016-08-09,ICCOPT,,Tokyo,Japan,,http://www.iccopt2016.tokyo/
+2016-03-23,Journées SMAI-MODE,,Toulouse,,,http://mode2016.sciencesconf.org/
+2016-02-08,Séminaire SPOT,,Toulouse,,,http://projects.laas.fr/spot/
+2015-12-02,Journées annuelles du GdR MOA,Université de Bourgogne,Dijon,,,http://samuelvaiter.com/events/journees-moa-2015/
+2015-07-14,International Symposium on Mathematical Programming,,Pittsburgh,USA,,http://www.ismp2015.org/
+2015-03-04,"Séminaire Statistiques, Probabilités, Optimisation et Contrôle",Université de Bourgogne,Dijon,,,http://math.u-bourgogne.fr/spip.php?rubrique79
+2014-12-04,Encuentro anual de la Sociedad Matematica de Chile (SOMATCHI),,Quinamavida,Chile,,http://www.somachi.cl/VerCongreso.aspx?IdAgenda=19
+2014-10-30,Seminario del Departamento de Matematica,Universidad Santa Maria,Valparaiso,Chile,,http://www.am2v.cl/index.php?option=com_content&view=article&id=206:ggarrigos&catid=51:seminars-2014
+2014-09-08,Franco-Italian Workshop,LCSL,Sestri-Levante,Italia,,https://www.ljll.math.upmc.fr/~plc/sestri/
+2014-09-02,Séminaire ACSIOM,IMAG,Montpellier,,,http://www.i3m.univ-montp2.fr/seminaires-et-groupes-de-travail/index.php?option=com_content&view=article&id=108&catid=19&sem=8
+2014-03-26,Journées SMAI-MODE,,Rennes,,,http://hjnet.math.cnrs.fr/MODE-Rennes.html
+2013-12-12,Seminario DMAT,Universidad Santa Maria,Valparaiso,Chile,,http://pguzman.mat.utfsm.cl/se-dmat/
+2013-09-25,Seminar of Optimization and Equilibrium,CMM,Santiago,Chile,,http://www.cmm.uchile.cl/?cat=12
+2013-06-17,Journées annuelles du GdR MOA,IHP,Paris,,,http://gdrmoa.math.cnrs.fr/activites/journees-annuelles-gdr-moa-2013/

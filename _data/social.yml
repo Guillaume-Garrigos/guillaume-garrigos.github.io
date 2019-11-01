@@ -1,0 +1,15 @@
+- name: Google Scholar
+  ico: "/assets/images/ico/google-scholar.png"
+  url: "https://scholar.google.com/citations?user=DN0Cu0IAAAAJ"
+  
+- name: arXiv
+  ico: "/assets/images/ico/arxiv.png"
+  url: "https://arxiv.org/a/0000-0002-8613-5664.html"
+
+- name: Stack Exchange
+  ico: "/assets/images/ico/stack-exchange.png"
+  url: "https://math.stackexchange.com/users/240154/guillaume-garrigos"
+
+- name: Github
+  ico: "/assets/images/ico/github.png"
+  url: "https://github.com/Guillaume-Garrigos"

@@ -1,0 +1,15 @@
+- name: Homepage
+  url: "/"
+  accesskey: "1"
+  
+- name: Research
+  url: "/research"
+  accesskey: "2"
+  
+- name: Enseignement
+  url: "/teaching"
+  accesskey: "3"
+  
+- name: Curriculum
+  url: "/assets/curriculum/cv.pdf"
+  accesskey: "4"

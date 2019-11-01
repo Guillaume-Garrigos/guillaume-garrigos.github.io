@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+
+  {% include head.html %}
+
+  <body>
+    <div id="page" class="container">
+      <div id="header">
+	      
+        {% include menu.html %}
+	      
+      </div> <!--header-->
+      <div id="main">
+        <div id="featured" style="border-top-width: 0px;  padding-top: 0px; margin-top: 0px;">
+          
+          {{ content }}
+        
+        </div> <!--featured-->
+		
+		    {% include footer.html %}
+        
+	    </div> <!--main-->
+    </div> <!--page-->
+   </body>
+</html>
