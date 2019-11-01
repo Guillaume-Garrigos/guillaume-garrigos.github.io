@@ -1,0 +1,300 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2015 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{casual}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
+\moderncvcolor{orange}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+%\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+
+% adjust the page margins
+\usepackage[scale=0.75]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% personal data
+\name{Guillaume}{Garrigos}
+\title{Curriculum Vitae}                               % optional, remove / comment the line if not wanted
+\address{Bâtiment Sophie Germain,
+Université Paris Diderot}{75205 Paris CEDEX 13}{}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
+%\phone[mobile]{+1~(234)~567~890}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
+%\phone[fixed]{+2~(345)~678~901}
+%\phone[fax]{+3~(456)~789~012}
+\email{garrigos@paris.lpsm}                               % optional, remove / comment the line if not wanted
+\homepage{www.guillaume-garrigos.com}                         % optional, remove / comment the line if not wanted
+%\social[linkedin]{john.doe}                        % optional, remove / comment the line if not wanted
+%\social[twitter]{jdoe}                             % optional, remove / comment the line if not wanted
+%\social[github]{jdoe}                              % optional, remove / comment the line if not wanted
+\extrainfo{French, 29, Single}                 % optional, remove / comment the line if not wanted
+\photo[96pt][0.1pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+% bibliography adjustements (only useful if you make citations in your resume, or print a list of publications using BibTeX)
+%   to show numerical labels in the bibliography (default is to show no labels)
+\makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
+%   to redefine the bibliography heading string ("Publications")
+%\renewcommand{\refname}{Articles}
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+
+% customize the enumerate environments (i.e. enumerate, itemize, ...)
+\usepackage{enumitem}
+\setlist{nolistsep}
+
+% A custom version of the \cventry command that supports large itemized lists
+% inside argument #7 (the custom cvitemize lists should be used!)
+\newcommand*{\cventrylong}[7][.25em]{%
+  \begin{tabular}{@{}p{\hintscolumnwidth}@{\hspace{\separatorcolumnwidth}}p{\maincolumnwidth}@{}}%
+    \raggedleft\hintstyle{#2} &{%
+        {\bfseries#3}%
+        \ifthenelse{\equal{#4}{}}{}{, {\slshape#4}}%
+        \ifthenelse{\equal{#5}{}}{}{, #5}%
+        \ifthenelse{\equal{#6}{}}{}{, #6}%
+    }%
+  \end{tabular}%
+  {\small#7}%
+  \par\addvspace{#1}}
+% A custom version of the itemize environment that sets the appropriate left
+% margin for use inside \cventylong
+\newlist{cvitemize}{itemize}{1}
+\setlist[cvitemize]{label=\labelitemi,%
+leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
+
+
+\begin{document}
+
+\makecvtitle
+\pagestyle{empty}
+
+\section{Personal information and contact}
+\cvitem{\faUser}{Born in Toulouse (France), May 8th 1989. 30 y.o.}
+\cvitem{\faEnvelopeO}{Bâtiment Sophie Germain,
+Université Paris Diderot,
+75205 Paris CEDEX 13, France. }
+\cvitem{\faAt}{garrigos@lpsm.paris}
+\cvitem{\faGlobe}{\link[http://www.guillaume-garrigos.com]{http://www.guillaume-garrigos.com}}
+%\cvitem{\faCommentingO}{\link[http://www.nearlyoptimal.guillaume-garrigos.com]{http://www.nearlyoptimal.guillaume-garrigos.com}}
+
+\section{Current position (2018--~)}
+\cvitem{position}{\textbf{Maître de conférences} at Université Paris Diderot}
+\cvitem{affiliation}{Laboratoire de Probabilités, Statistique et Modélisation (LPSM, UMR 8001)}
+\cvitem{research interests}{
+optimization, statistical machine learning, inverse problems, image and signal processing, algorithms and continuous dynamical systems, tame optimization.
+}
+
+\section{Previous positions (2015--2018)}
+\cventry{2017--2018}{Post-doc}{\'Ecole Normale Supérieure}{Paris, France}{}{
+Lab: Département de Mathématiques et Applications
+\newline{}%
+Main collaborator : Gabriel Peyr\'e (ENS, CNRS, INRIA)\newline{}%
+Research themes : inverse problems, signal and image processing, optimization
+}
+
+\cventry{2015--2017}{Post-doc}{Istituto Italiano di Tecnologia}{Genoa, Italy}{}{
+Lab: Laboratory for Computational and Statistical Learning
+\newline{}%
+Main collaborators : Lorenzo Rosasco (IIT, MIT) and Silvia Villa (IIT)
+\newline{}%
+Research themes : optimization and regularization methods for machine learning.
+}
+
+\section{Ph.D. thesis (2012--2015)}
+\cvitem{title}{\emph{Descent dynamical systems and algorithms for tame optimization and multi-objective problems}}
+\cvitem{university}{Université de Montpellier (France) and Universidad Santa Maria (Valparaíso, Chile)}
+\cvitem{supervisors}{Hédy Attouch (UM) and Juan Peypouquet (USM)}
+\cvitem{committee}{Hédy Attouch, Aris Daniilidis, Jalal Fadili, Pedro Gajardo, Adrian Lewis, Juan Peypouquet, Lionel Thibault}
+
+\section{Education and Degrees}
+\cventry{2013}{Agrégation de Mathématiques}{}{ranked 147/323}{}{}
+\cventry{2010--2012}{Master}{Université de Montpellier}{}{}{Mathématiques, Statistiques et Applications}  % arguments 3 to 6 can be left empty
+\cventry{2007--2010}{Licence}{Université de Montpellier}{}{}{Mathématiques Fondamentales et Appliquées}
+\cventry{2007}{Baccalauréat}{Lycée Diderot}{Narbonne}{}{}
+
+\section{Teaching}
+\cvitem{2019-2020}{Optimization, CM-TD-TP, L3, 78h}
+\cvitem{}{Optimization for Machine Learning, CM, M2, 36h}
+\cvitem{}{Information Theory, TD, M1, 36h}
+\cvitem{}{Matrix Numerical Analysis, TD-TP, L3, 42h}
+\cvitem{2018-2019}{Optimization, TD, L3, 36h}
+\cvitem{}{Information Theory, TD, M1, 36h}
+\cvitem{}{Matrix Numerical Analysis, TD-TP, L3, 54h}
+\cvitem{2017}{Labs during the machine learning summer school RegML 2017, 8h}
+\cvitem{2014-2015}{Linear Algebra, CM-TD, L1, 128h}
+\cvitem{2012-2013}{Linear Algebra, CM-TD, L1, 64h}
+
+\section{Publications}
+\cventry{}{{Publications in international specialized journals}}{}{}{}{
+\begin{itemize}
+	\item G. Garrigos, L. Rosasco and S. Villa.
+\textit{Iterative regularization via dual diagonal descent}.
+{Journal of Mathematical Imaging and Vision}, Vol. 60, No. 2, pp. 1898--215, 2018.
+	\item H. Attouch, G. Garrigos and X. Goudou. \textit{A dynamic gradient approach to Pareto optimization with nonsmooth convex objective functions}. {Journal of Mathematical Analysis and Applications}, Vol. 422, No. 1, pp. 741--771, 2015.
+	\item P. Frankel, G. Garrigos and J. Peypouquet. \textit{Splitting methods with variable metric for KL functions and general convergence rates}.  {Journal of Optimization Theory and Applications}, Vol. 165, pp. 874--900, 2015. 
+\end{itemize}
+}
+
+\cventry{}{{Publications in international conferences}}{}{}{}{
+\begin{itemize}
+	\item J. Fadili, G. Garrigos, J. Malick and G. Peyré.
+\textit{Model Consistency for Learning with Mirror-Stratifiable Regularizers}.
+{AISTATS, 2019. Preprint on arXiv:1803.08381.}
+	\item G. Garrigos, L. Rosasco and S. Villa.
+\textit{Sparse Multiple Kernel Learning: Support Identification via Mirror Stratifiability}.
+{EUSIPCO 2018, pp. 1077--1081, 2018.}
+	\item G. Garrigos, L. Rosasco and S. Villa.
+\textit{Iterative regularization via dual diagonal descent}.
+{9th NIPS Workshop on Optimization for Machine Learning}, 2016.
+\end{itemize}
+}
+
+\cventry{}{{Preprints}}{}{}{}{
+\begin{itemize}
+	\item 
+G. Garrigos, L. Rosasco and S. Villa.
+\textit{Thresholding gradient methods in Hilbert spaces: support identification and linear convergence}.
+{Preprint on arXiv:1712.00357.}
+	\item 
+G. Garrigos, L. Rosasco and S. Villa.
+\textit{Convergence of the Forward-Backward algorithm: beyond the worst case with geometry}.
+{Preprint on arXiv:1703.09477.}
+	\item
+H. Attouch and G. Garrigos.
+\textit{Multiobjective optimization : an inertial dynamical approach to Pareto optima}.
+{Preprint on arXiv:1506.02823.}
+\end{itemize}
+}
+
+\section{Miscellaneous}
+\cvitem{2017}{SMAI-MODE Dodu Prize for the best young researcher talk: \textit{Structured sparsity in inverse problems and support recovery with mirror-stratifiable functions}.}
+
+\section{Responsibilities}
+\subsection{Seminars, Events}
+\cvitem{2018}{Co-organizer of  the session "\textit{Dimensionality reduction tools for learning: A sketchy session}" for the International Symposium on Mathematical Programming (ISMP)}
+\cvitem{2017}{Organizer of the NORIA group meeting at ENS}
+\cvitem{2017}{Co-organizer of the Machine Learning summer school RegML 2017, in Oslo}
+\cvitem{2015--2017}{Organizer of the Machine Learning Tutorials, between the LCSL groups at IIT (Genova) and MIT (Boston)}
+
+\subsection{Editorial Activity}
+\cvitem{}{I am reviewing for various journals: SIAM Journal on Optimization,  SIAM Journal on Imaging Science, Mathematics of Operations Research, Optimization, Mathematical Methods of Operations Research, Journal of Optimization Theory and Applications,  Computational and Applied Mathematics, IEEE Computational Intelligence Magazine.}
+
+
+\section{List of given talks}
+\cventrylong{}{}{}{}{}{
+\begin{small}
+\begin{cvitemize}
+	\item ICCOPT, Berlin, Germany. 2019 Aug 07.
+	\item Séminaire. Limoges, France. 2019 Jun 21.
+	\item Séminaire LCSL, Genova, Italy. 2019 May 22.
+	\item AISTATS, Okinawa, Japan. 2019 Apr 17.
+	\item Séminaire Parisien de Statistique, IHP, Paris, France. 2019 Feb 18.
+	\item Séminaire. Avignon, France. 2019 Feb 14.
+	\item European Signal Processing Conference (EUSIPCO), Roma, Italia. 2018 Sep 03-07.
+	\item International Symposium on Mathematical Programming,  Bordeaux. 2018 May 05.
+	\item SIAM Conference on Imaging Science, Bologna, Italia. 2018 June 05-08.
+	\item Inverse Problems: Modeling and Simulation conference, Malta. 2018 May 21-25.
+	\item Journée Parcimonie et Applications du GdR MIA. IMB, Bordeaux, France. 2018 May 05.
+	\item Séminaire Signal, Statistique et Apprentissage. Telecom, Paris, France. 2018 Apr 16.
+	\item Journées SMAI-MODE. Grenoble, France. 2018 Mar 28-30.
+	\item Séminaire commun de Statistique P6-P7, Paris, 2018 Feb 20.
+	\item Séminaire Images Optimisation et Probabilités, Université de Bordeaux, 2018 Feb 07.
+	\item LCSL Machine Learning Seminar, Universita di Genova, Italy, 2018 Jan 29.
+	\item Séminaire du Centre de Vision Numérique, Centrale Supélec, Paris, France. 2018 Jan 23.
+	\item Mathematics and Image Analysis, Humboldt University, Berlin, Germany. 2018 Jan 15-17.
+	\item Dynamics and Algorithms in Convex Optimization, U. de Chile, Santiago. 2017 Dec 14.
+	\item V-Coloquio, Pontifica U. Catolica de Valparaiso, Valparaiso, Chile. 2017 Dec 11.
+	\item Séminaire du LJK de Statistique \& Probabilités, Grenoble, France. 2017 Dec 07.
+	\item Journées du GDR MOA-MIA, IMB, Bordeaux, France. 2017 Oct 17.
+	\item Optimization 2017, Lisboa, Portugal. 2017 Sep 08.
+	\item Journées Franco-Chiliennes d'Optimisation, IMT, Toulouse, France. 2017 Jul 05.
+	\item Séminaire SIERRA, INRIA, Paris, France. 2017 Feb 14.
+	\item Séminaire Mathématiques de l'apprentissage, IMT, Toulouse, France. 2017 Feb 09.
+	\item Seminario  DeMat, Universidad Santa Maria, Valparaiso, Chile. 2016 Dec 19.
+	\item Seminar of Optimization and Equilibrium, CMM, Santiago, Chile. 2016 Dec 14.
+	\item NIPS, Barcelona, Spain. 2016 Dec 10.
+	\item ICCOPT, Tokyo, Japan. 2016 Aug 09.
+	\item Journées SMAI-MODE. Toulouse, France. 2016 Mar 23-25.
+	\item Journées annuelles du GdR MOA, Dijon, France. 2015 Dec 02.
+	\item International Symposium on Mathematical Programming, Pittsburgh, USA. 2014 Jul 14.
+	\item Séminaire SPOC, Université de Bourgogne, Dijon, France. 2015 Mar 04.
+	\item Encuentro anual de la Sociedad Matematica de Chile, Quinamavida, Chile. 2014 Dec 04.
+	\item Seminario DeM, Universidad Santa Maria, Valparaiso, Chile. 2014 Oct 30.
+	\item Franco-Italian Workshop, Sestri-Levante, Italia. 2014 Sep 09.
+	\item Séminaire ACSIOM, Université de Montpellier, Montpellier, France. 2014 Sep 02.
+	\item Journées SMAI-MODE. Rennes, France. 2014 Mar 26-28.
+	\item Centro de Modelamiento Matemático, U. de Chile. Santiago, Chile. 2013 Sep 25.
+	\item Journées annuelles du GdR  MOA. Paris, France. 2013 Jun 17-19.
+\end{cvitemize}
+\end{small}
+}
+
+
+
+
+
+
+%\section{Languages}
+%\cvitemwithcomment{Language 1}{Skill level}{Comment}
+%\cvitemwithcomment{Language 2}{Skill level}{Comment}
+%\cvitemwithcomment{Language 3}{Skill level}{Comment}
+%
+%\section{Computer skills}
+%\cvdoubleitem{category 1}{XXX, YYY, ZZZ}{category 4}{XXX, YYY, ZZZ}
+%\cvdoubleitem{category 2}{XXX, YYY, ZZZ}{category 5}{XXX, YYY, ZZZ}
+%\cvdoubleitem{category 3}{XXX, YYY, ZZZ}{category 6}{XXX, YYY, ZZZ}
+%
+%\section{Interests}
+%\cvitem{hobby 1}{Description}
+%\cvitem{hobby 2}{Description}
+%\cvitem{hobby 3}{Description}
+%
+%\section{Extra 1}
+%\cvlistitem{Item 1}
+%\cvlistitem{Item 2}
+%\cvlistitem{Item 3. This item is particularly long and therefore normally spans over several lines. Did you notice the indentation when the line wraps?}
+%
+%\section{Extra 2}
+%\cvlistdoubleitem{Item 1}{Item 4}
+%\cvlistdoubleitem{Item 2}{Item 5\cite{book1}}
+%\cvlistdoubleitem{Item 3}{Item 6. Like item 3 in the single column list before, this item is particularly long to wrap over several lines.}
+
+%\section{References}
+%\begin{cvcolumns}
+%  \cvcolumn{Category 1}{\begin{itemize}\item Person 1\item Person 2\item Person 3\end{itemize}}
+%  \cvcolumn{Category 2}{Amongst others:\begin{itemize}\item Person 1, and\item Person 2\end{itemize}(more upon request)}
+%  \cvcolumn[0.5]{All the rest \& some more}{\textit{That} person, and \textbf{those} also (all available upon request).}
+%\end{cvcolumns}
+
+% Publications from a BibTeX file without multibib
+%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{publications}                        % 'publications' is the name of a BibTeX file
+
+% Publications from a BibTeX file using the multibib package
+%\section{Publications}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
+\end{document}
+
+
+%% end of file `template.tex'.
