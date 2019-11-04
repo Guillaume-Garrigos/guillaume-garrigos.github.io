@@ -13,7 +13,9 @@ color:
     mainbody: FFFFFF
   text:
     main: 6c6c6c
+    bold: 444444
     link: 2980b9
+
     
 # News global variables
 news:
