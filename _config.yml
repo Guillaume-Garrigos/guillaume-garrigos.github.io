@@ -22,3 +22,8 @@ news:
     width: 192
   display-max: 8 # this is the number of news shown on the front page
   
+gems:
+- jekyll
+
+plugins:
+- jekyll-seo-tag
