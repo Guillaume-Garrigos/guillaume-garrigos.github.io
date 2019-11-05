@@ -9,8 +9,8 @@ layout: default
 
 {% for paper in site.data.papers %}
 {% if paper.status == "preprint" %}
-{{ paper.authors-html }} \
-**{{ paper.title }}** \
+{{ paper.authors-html }} <br>
+**{{ paper.title }}** <br>
 Preprint on [arXiv:{{ paper.arxiv }}](arxiv.org/abs/{{ paper.arxiv }})
 {%- if paper.link-slides -%}
 , [slides](/assets/slides/{{ paper.link-slides }}.pdf)
@@ -27,9 +27,9 @@ Preprint on [arXiv:{{ paper.arxiv }}](arxiv.org/abs/{{ paper.arxiv }})
 
 {% for paper in site.data.papers %}
 {% if paper.status == "accepted-journal" %}
-{{ paper.authors-html }} \
-**{{ paper.title }}** \
-{{ paper.ref }} \
+{{ paper.authors-html }} <br>
+**{{ paper.title }}** <br>
+{{ paper.ref }} <br>
 Links: [editor]({{ paper.link-editor }}), 
 [arXiv:{{ paper.arxiv }}](arxiv.org/abs/{{ paper.arxiv }})
 {%- if paper.link-slides -%}
@@ -46,9 +46,9 @@ Links: [editor]({{ paper.link-editor }}),
 
 {% for paper in site.data.papers %}
 {% if paper.status == "accepted-conf" %}
-{{ paper.authors-html }} \
-**{{ paper.title }}** \
-{{ paper.ref }} \
+{{ paper.authors-html }} <br>
+**{{ paper.title }}** <br>
+{{ paper.ref }} <br>
 Links: [editor]({{ paper.link-editor }}), 
 [arXiv:{{ paper.arxiv }}](arxiv.org/abs/{{ paper.arxiv }})
 {%- if paper.link-slides -%}
@@ -63,8 +63,8 @@ Links: [editor]({{ paper.link-editor }}),
 
 ---
 
-G. Garrigos \
-**Descent dynamical systems and algorithms for tame optimization and multi-objective problems.** \
+G. Garrigos <br>
+**Descent dynamical systems and algorithms for tame optimization and multi-objective problems.** <br>
 Links: [manuscript](https://tel.archives-ouvertes.fr/tel-01245406).
 
 ---
