@@ -11,7 +11,7 @@ layout: default
 {% if paper.status == "preprint" %}
 {{ paper.authors-html }} <br>
 **{{ paper.title }}** <br>
-Preprint on [arXiv:{{ paper.arxiv }}](arxiv.org/abs/{{ paper.arxiv }})
+Preprint on [arXiv:{{ paper.arxiv }}](https://arxiv.org/abs/{{ paper.arxiv }})
 {%- if paper.link-slides -%}
 , [slides](/assets/slides/{{ paper.link-slides }}.pdf)
 {%- endif -%}.
@@ -31,7 +31,7 @@ Preprint on [arXiv:{{ paper.arxiv }}](arxiv.org/abs/{{ paper.arxiv }})
 **{{ paper.title }}** <br>
 {{ paper.ref }} <br>
 Links: [editor]({{ paper.link-editor }}), 
-[arXiv:{{ paper.arxiv }}](arxiv.org/abs/{{ paper.arxiv }})
+[arXiv:{{ paper.arxiv }}](https://arxiv.org/abs/{{ paper.arxiv }})
 {%- if paper.link-slides -%}
 , [slides](/assets/slides/{{ paper.link-slides }}.pdf)
 {%- endif -%}.
@@ -50,7 +50,7 @@ Links: [editor]({{ paper.link-editor }}),
 **{{ paper.title }}** <br>
 {{ paper.ref }} <br>
 Links: [editor]({{ paper.link-editor }}), 
-[arXiv:{{ paper.arxiv }}](arxiv.org/abs/{{ paper.arxiv }})
+[arXiv:{{ paper.arxiv }}](https://arxiv.org/abs/{{ paper.arxiv }})
 {%- if paper.link-slides -%}
 , [slides](/assets/slides/{{ paper.link-slides }}.pdf)
 {%- endif -%}.
