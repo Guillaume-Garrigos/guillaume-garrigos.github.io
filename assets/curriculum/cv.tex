@@ -48,6 +48,16 @@ Université Paris Diderot}{75205 Paris CEDEX 13}{}% optional, remove / comment t
 % bibliography with mutiple entries
 %\usepackage{multibib}
 %\newcites{book,misc}{{Books},{Others}}
+
+%----------------------------------------------------------------------------------
+%            data
+%----------------------------------------------------------------------------------
+% This is to load data from .csv files in my repertory
+% we use a RAW import to avoid conflict with special characters like # and &
+\usepackage{datatool}
+\DTLloadrawdb[]{papers}{../../_data/papers.csv}
+\DTLloadrawdb[]{talks}{../../_data/talks.csv}
+
 %----------------------------------------------------------------------------------
 %            content
 %----------------------------------------------------------------------------------
@@ -138,44 +148,31 @@ Research themes : optimization and regularization methods for machine learning.
 \cvitem{2012-2013}{Linear Algebra, CM-TD, L1, 64h}
 
 \section{Publications}
-\cventry{}{{Publications in international specialized journals}}{}{}{}{
+% Here we use the data from papers.csv
+\cventry{}{{Publications in international specialized journals}}{}{}{}{%
 \begin{itemize}
-	\item G. Garrigos, L. Rosasco and S. Villa.
-\textit{Iterative regularization via dual diagonal descent}.
-{Journal of Mathematical Imaging and Vision}, Vol. 60, No. 2, pp. 1898--215, 2018.
-	\item H. Attouch, G. Garrigos and X. Goudou. \textit{A dynamic gradient approach to Pareto optimization with nonsmooth convex objective functions}. {Journal of Mathematical Analysis and Applications}, Vol. 422, No. 1, pp. 741--771, 2015.
-	\item P. Frankel, G. Garrigos and J. Peypouquet. \textit{Splitting methods with variable metric for KL functions and general convergence rates}.  {Journal of Optimization Theory and Applications}, Vol. 165, pp. 874--900, 2015. 
+\DTLforeach*[\DTLiseq{\status}{accepted-journal}]{papers}{\status=status, \title=title, \authors=authors, \ref=ref,\arxiv=arxiv}{
+	\item \link[\authors. \textit{\title}. \ref. ]%
+	{https://arxiv.org/abs/\arxiv}
+}
 \end{itemize}
 }
 
 \cventry{}{{Publications in international conferences}}{}{}{}{
 \begin{itemize}
-	\item J. Fadili, G. Garrigos, J. Malick and G. Peyré.
-\textit{Model Consistency for Learning with Mirror-Stratifiable Regularizers}.
-{AISTATS, 2019. Preprint on arXiv:1803.08381.}
-	\item G. Garrigos, L. Rosasco and S. Villa.
-\textit{Sparse Multiple Kernel Learning: Support Identification via Mirror Stratifiability}.
-{EUSIPCO 2018, pp. 1077--1081, 2018.}
-	\item G. Garrigos, L. Rosasco and S. Villa.
-\textit{Iterative regularization via dual diagonal descent}.
-{9th NIPS Workshop on Optimization for Machine Learning}, 2016.
+\DTLforeach*[\DTLiseq{\status}{accepted-conf}]{papers}{\status=status, \title=title, \authors=authors, \ref=ref,\arxiv=arxiv}{
+	\item \link[\authors. \textit{\title}. \ref. ]%
+	{https://arxiv.org/abs/\arxiv}
+}
 \end{itemize}
 }
 
 \cventry{}{{Preprints}}{}{}{}{
 \begin{itemize}
-	\item 
-G. Garrigos, L. Rosasco and S. Villa.
-\textit{Thresholding gradient methods in Hilbert spaces: support identification and linear convergence}.
-{Preprint on arXiv:1712.00357.}
-	\item 
-G. Garrigos, L. Rosasco and S. Villa.
-\textit{Convergence of the Forward-Backward algorithm: beyond the worst case with geometry}.
-{Preprint on arXiv:1703.09477.}
-	\item
-H. Attouch and G. Garrigos.
-\textit{Multiobjective optimization : an inertial dynamical approach to Pareto optima}.
-{Preprint on arXiv:1506.02823.}
+\DTLforeach*[\DTLiseq{\status}{preprint}]{papers}{\status=status, \title=title, \authors=authors, \arxiv=arxiv}{
+	\item \link[\authors. \textit{\title}. Preprint on arXiv:\arxiv.]%
+	{https://arxiv.org/abs/\arxiv}
+}
 \end{itemize}
 }
 
@@ -196,49 +193,13 @@ H. Attouch and G. Garrigos.
 \section{List of given talks}
 \cventrylong{}{}{}{}{}{
 \begin{small}
-\begin{cvitemize}
-	\item ICCOPT, Berlin, Germany. 2019 Aug 07.
-	\item Séminaire. Limoges, France. 2019 Jun 21.
-	\item Séminaire LCSL, Genova, Italy. 2019 May 22.
-	\item AISTATS, Okinawa, Japan. 2019 Apr 17.
-	\item Séminaire Parisien de Statistique, IHP, Paris, France. 2019 Feb 18.
-	\item Séminaire. Avignon, France. 2019 Feb 14.
-	\item European Signal Processing Conference (EUSIPCO), Roma, Italia. 2018 Sep 03-07.
-	\item International Symposium on Mathematical Programming,  Bordeaux. 2018 May 05.
-	\item SIAM Conference on Imaging Science, Bologna, Italia. 2018 June 05-08.
-	\item Inverse Problems: Modeling and Simulation conference, Malta. 2018 May 21-25.
-	\item Journée Parcimonie et Applications du GdR MIA. IMB, Bordeaux, France. 2018 May 05.
-	\item Séminaire Signal, Statistique et Apprentissage. Telecom, Paris, France. 2018 Apr 16.
-	\item Journées SMAI-MODE. Grenoble, France. 2018 Mar 28-30.
-	\item Séminaire commun de Statistique P6-P7, Paris, 2018 Feb 20.
-	\item Séminaire Images Optimisation et Probabilités, Université de Bordeaux, 2018 Feb 07.
-	\item LCSL Machine Learning Seminar, Universita di Genova, Italy, 2018 Jan 29.
-	\item Séminaire du Centre de Vision Numérique, Centrale Supélec, Paris, France. 2018 Jan 23.
-	\item Mathematics and Image Analysis, Humboldt University, Berlin, Germany. 2018 Jan 15-17.
-	\item Dynamics and Algorithms in Convex Optimization, U. de Chile, Santiago. 2017 Dec 14.
-	\item V-Coloquio, Pontifica U. Catolica de Valparaiso, Valparaiso, Chile. 2017 Dec 11.
-	\item Séminaire du LJK de Statistique \& Probabilités, Grenoble, France. 2017 Dec 07.
-	\item Journées du GDR MOA-MIA, IMB, Bordeaux, France. 2017 Oct 17.
-	\item Optimization 2017, Lisboa, Portugal. 2017 Sep 08.
-	\item Journées Franco-Chiliennes d'Optimisation, IMT, Toulouse, France. 2017 Jul 05.
-	\item Séminaire SIERRA, INRIA, Paris, France. 2017 Feb 14.
-	\item Séminaire Mathématiques de l'apprentissage, IMT, Toulouse, France. 2017 Feb 09.
-	\item Seminario  DeMat, Universidad Santa Maria, Valparaiso, Chile. 2016 Dec 19.
-	\item Seminar of Optimization and Equilibrium, CMM, Santiago, Chile. 2016 Dec 14.
-	\item NIPS, Barcelona, Spain. 2016 Dec 10.
-	\item ICCOPT, Tokyo, Japan. 2016 Aug 09.
-	\item Journées SMAI-MODE. Toulouse, France. 2016 Mar 23-25.
-	\item Journées annuelles du GdR MOA, Dijon, France. 2015 Dec 02.
-	\item International Symposium on Mathematical Programming, Pittsburgh, USA. 2014 Jul 14.
-	\item Séminaire SPOC, Université de Bourgogne, Dijon, France. 2015 Mar 04.
-	\item Encuentro anual de la Sociedad Matematica de Chile, Quinamavida, Chile. 2014 Dec 04.
-	\item Seminario DeM, Universidad Santa Maria, Valparaiso, Chile. 2014 Oct 30.
-	\item Franco-Italian Workshop, Sestri-Levante, Italia. 2014 Sep 09.
-	\item Séminaire ACSIOM, Université de Montpellier, Montpellier, France. 2014 Sep 02.
-	\item Journées SMAI-MODE. Rennes, France. 2014 Mar 26-28.
-	\item Centro de Modelamiento Matemático, U. de Chile. Santiago, Chile. 2013 Sep 25.
-	\item Journées annuelles du GdR  MOA. Paris, France. 2013 Jun 17-19.
-\end{cvitemize}
+\begin{itemize}
+\DTLforeach*{talks}{\date=date, \event=event, \institute=institute, \city=city, \country=country}{
+	\item \date ~ \event.
+	\DTLifnullorempty{\institute}{}{\institute, }\city,
+	\DTLifnullorempty{\country}{France}{\country}.%
+}	
+\end{itemize}
 \end{small}
 }
 
