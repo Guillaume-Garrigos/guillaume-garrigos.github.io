@@ -55,8 +55,8 @@ Université Paris Diderot}{75205 Paris CEDEX 13}{}% optional, remove / comment t
 % This is to load data from .csv files in my repertory
 % we use a RAW import to avoid conflict with special characters like # and &
 \usepackage{datatool}
-\DTLloadrawdb[]{papers}{../../_data/papers.csv}
-\DTLloadrawdb[]{talks}{../../_data/talks.csv}
+\DTLloadrawdb[]{papers}{../_data/papers.csv}
+\DTLloadrawdb[]{talks}{../_data/talks.csv}
 
 %----------------------------------------------------------------------------------
 %            content
@@ -85,6 +85,11 @@ Université Paris Diderot}{75205 Paris CEDEX 13}{}% optional, remove / comment t
 \setlist[cvitemize]{label=\labelitemi,%
 leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
 
+\usepackage[misc]{ifsym}
+\usepackage[colorlinks,unicode]{hyperref}
+\hypersetup{
+    urlcolor = orange
+}
 
 \begin{document}
 
@@ -97,7 +102,7 @@ leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
 Université Paris Diderot,
 75205 Paris CEDEX 13, France. }
 \cvitem{\faAt}{garrigos@lpsm.paris}
-\cvitem{\faGlobe}{\link[http://www.guillaume-garrigos.com]{http://www.guillaume-garrigos.com}}
+\cvitem{\faGlobe}{\link[http://guillaume-garrigos.com]{http://guillaume-garrigos.com}}
 %\cvitem{\faCommentingO}{\link[http://www.nearlyoptimal.guillaume-garrigos.com]{http://www.nearlyoptimal.guillaume-garrigos.com}}
 
 \section{Current position (2018--~)}
@@ -152,8 +157,8 @@ Research themes : optimization and regularization methods for machine learning.
 \cventry{}{{Publications in international specialized journals}}{}{}{}{%
 \begin{itemize}
 \DTLforeach*[\DTLiseq{\status}{accepted-journal}]{papers}{\status=status, \title=title, \authors=authors, \ref=ref,\arxiv=arxiv}{
-	\item \link[\authors. \textit{\title}. \ref. ]%
-	{https://arxiv.org/abs/\arxiv}
+	\item \authors. \textit{\title}. \ref.
+	\link[\scriptsize{\PaperPortrait}]{https://arxiv.org/abs/\arxiv}
 }
 \end{itemize}
 }
@@ -161,8 +166,8 @@ Research themes : optimization and regularization methods for machine learning.
 \cventry{}{{Publications in international conferences}}{}{}{}{
 \begin{itemize}
 \DTLforeach*[\DTLiseq{\status}{accepted-conf}]{papers}{\status=status, \title=title, \authors=authors, \ref=ref,\arxiv=arxiv}{
-	\item \link[\authors. \textit{\title}. \ref. ]%
-	{https://arxiv.org/abs/\arxiv}
+	\item \authors. \textit{\title}. \ref.
+	\link[\scriptsize{\PaperPortrait}]{https://arxiv.org/abs/\arxiv}
 }
 \end{itemize}
 }
@@ -170,13 +175,15 @@ Research themes : optimization and regularization methods for machine learning.
 \cventry{}{{Preprints}}{}{}{}{
 \begin{itemize}
 \DTLforeach*[\DTLiseq{\status}{preprint}]{papers}{\status=status, \title=title, \authors=authors, \arxiv=arxiv}{
-	\item \link[\authors. \textit{\title}. Preprint on arXiv:\arxiv.]%
-	{https://arxiv.org/abs/\arxiv}
+	\item \authors. \textit{\title}. Preprint on arXiv:\arxiv.
+	\link[\scriptsize{\PaperPortrait}]{https://arxiv.org/abs/\arxiv}
 }
 \end{itemize}
 }
 
 \section{Miscellaneous}
+\cvitem{2019}{PEPS grant funded by INSMI (CNRS), 3,5k EUR.}
+
 \cvitem{2017}{SMAI-MODE Dodu Prize for the best young researcher talk: \textit{Structured sparsity in inverse problems and support recovery with mirror-stratifiable functions}.}
 
 \section{Responsibilities}
