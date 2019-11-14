@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     
     env:
-      MANUSCRIPT_PATH: curriculum/cv # exclude the '.tex' / '.pdf' extension!
+      MANUSCRIPT_PATH: /curriculum/cv # exclude the '.tex' / '.pdf' extension!
       LATEX: pdflatex # eventually add -shell-escape if needed
       BIBTEX: bibtex
 
