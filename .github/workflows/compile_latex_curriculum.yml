@@ -1,5 +1,5 @@
 name: latex-builder
-# Automatically builds LaTex curriculum and push the latest PDF back to GitHub    git rm -rf . after hey3
+# Automatically builds LaTex curriculum and push the latest PDF back to GitHub    git rm -rf . after hey3 ; git checkout --orphan ${GITHUB_REF##*/}-pdf before hey1
 
 on: [push]
 
@@ -31,7 +31,6 @@ jobs:
         ${LATEX} ${MANUSCRIPT_PATH##*/}.tex
     - name: Push paper
       run: |
-        git checkout --orphan ${GITHUB_REF##*/}-pdf
         echo 'hey1'
         git rm -rf .github/
         echo 'hey2'
