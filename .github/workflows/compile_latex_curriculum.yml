@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     
     env:
-      MANUSCRIPT_PATH: /curriculum/cv # exclude the '.tex' / '.pdf' extension!
+      MANUSCRIPT_PATH: curriculum/cv # exclude the '.tex' / '.pdf' extension!
       LATEX: pdflatex # eventually add -shell-escape if needed
       BIBTEX: bibtex
 
@@ -32,9 +32,14 @@ jobs:
     - name: Push paper
       run: |
         git checkout --orphan ${GITHUB_REF##*/}-pdf
+        echo 'hey1'
         git rm -rf .github/
+        echo 'hey2'
         cd ${MANUSCRIPT_PATH%/*}
+        echo 'hey3'
         git rm -rf . 
+        echo 'hey4'
         git add -f ${MANUSCRIPT_PATH##*/}.pdf
+        echo 'hey5'
         git -c user.name='paper-maker' -c user.email='paper-maker' commit -m "update pdf"
         git push -q -f https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} ${GITHUB_REF##*/}-pdf
