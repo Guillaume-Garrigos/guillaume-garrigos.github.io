@@ -1,5 +1,5 @@
 name: latex-builder
-# Automatically builds LaTex curriculum and push the latest PDF back to GitHub
+# Automatically builds LaTex curriculum and push the latest PDF back to GitHub    git rm -rf . after hey3
 
 on: [push]
 
@@ -36,8 +36,7 @@ jobs:
         git rm -rf .github/
         echo 'hey2'
         cd ${MANUSCRIPT_PATH%/*}
-        echo 'hey3'
-        git rm -rf . 
+        echo 'hey3'  
         echo 'hey4'
         git add -f ${MANUSCRIPT_PATH##*/}.pdf
         echo 'hey5'
