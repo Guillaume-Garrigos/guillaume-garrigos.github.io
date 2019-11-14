@@ -1,5 +1,5 @@
-name: paper-maker
-description: Automatically builds LaTex curriculum and push the latest PDF back to GitHub
+name: latex-builder
+# Automatically builds LaTex curriculum and push the latest PDF back to GitHub
 
 on: [push]
 
