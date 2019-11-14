@@ -1,43 +1,38 @@
-name: latex-builder
-# Automatically builds LaTex curriculum and push the latest PDF back to GitHub    git rm -rf . after hey3 ; git checkout --orphan ${GITHUB_REF##*/}-pdf before hey1
-
-on: [push]
-
+name: Github Actions CI
+on: push
 jobs:
   build:
-    
+    if: "!contains(github.event.head_commit.message, '[skip ci]')"
     runs-on: ubuntu-latest
-    
-    env:
-      MANUSCRIPT_PATH: curriculum/cv # exclude the '.tex' / '.pdf' extension!
-      LATEX: pdflatex # eventually add -shell-escape if needed
-      BIBTEX: bibtex
-
-    steps: 
-    - uses: actions/checkout@v1
-    - name: Install texlive
+    steps:
+    - name: Set up Git repository
+      uses: actions/checkout@v1
+    - name: Compile LaTeX document
+      uses: xu-cheng/latex-action@master
+      with:
+        root_file: curriculum/cv.tex
+    - name: Check pdf file
       run: |
-        sudo apt-get install texlive-publishers \
-                             texlive-latex-recommended \
-                             texlive-latex-extra \
-                             texlive-fonts-recommended \
-                             texlive-fonts-extra
-    - name: Build paper
+        file curriculum/cv.pdf | grep -q ' PDF '
+    - name: Upload curriculum/cv.pdf
       run: |
-        cd ${MANUSCRIPT_PATH%/*}
-        ${LATEX} ${MANUSCRIPT_PATH##*/}.tex
-        ${BIBTEX} ${MANUSCRIPT_PATH##*/}.aux
-        ${LATEX} ${MANUSCRIPT_PATH##*/}.tex
-        ${LATEX} ${MANUSCRIPT_PATH##*/}.tex
-    - name: Push paper
-      run: |
-        echo 'hey1'
-        git rm -rf .github/
-        echo 'hey2'
-        cd ${MANUSCRIPT_PATH%/*}
-        echo 'hey3'  
-        echo 'hey4'
-        git add -f ${MANUSCRIPT_PATH##*/}.pdf
-        echo 'hey5'
-        git -c user.name='paper-maker' -c user.email='paper-maker' commit -m "update pdf"
-        git push -q -f https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} ${GITHUB_REF##*/}-pdf
+        set -e
+        # configure git
+        git config --global user.name "Guillaume-Garrigos"
+        git config --global user.email "guillaume.garrigos@lpsm.paris"
+        # setup ssh
+        mkdir ~/.ssh
+        chmod 700 ~/.ssh
+        echo "$DEPLOY_KEY" > ~/.ssh/id_ed25519
+        chmod 600 ~/.ssh/id_ed25519
+        git config --global core.sshCommand "ssh -i ~/.ssh/id_ed25519 -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
+        git clone --depth=1 git@github.com:Guillaume-Garrigos/website.git "$GITHUB_WORKSPACE/website"
+        cp -f curriculum/cv.pdf "$GITHUB_WORKSPACE/website/file/cv.pdf"
+        cd "$GITHUB_WORKSPACE/website"
+        git add file/cv.pdf
+        git diff --exit-code HEAD -- file/cv.pdf && exit 0
+        git commit -m "[github actions] update cv"
+        git push
+      env:
+        DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
+if: github.event_name == 'push' && github.ref == 'refs/heads/master'
