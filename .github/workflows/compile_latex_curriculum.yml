@@ -36,4 +36,4 @@ jobs:
         git commit -m "[github actions] deploy"
         git push
       env:
-DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
+        DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
