@@ -1,0 +1,25 @@
+name: Latex Compiler
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Set up Git repository
+      uses: actions/checkout@master
+    - name: Compile Latex Document
+      uses: xu-cheng/latex-action@master
+      with:
+        root_file: test.tex
+    - name: Check pdf files
+      run: |
+        file curriculum/cv.pdf | grep -q ' PDF '
+    - name: Commit files
+      run: |
+        git config --local user.email "guillaume.garrigos@lpsm.paris"
+        git config --local user.name "Guillaume-Garrigos"
+        git commit -m "Add compiled Latex -> PDF document" -a
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
