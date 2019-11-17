@@ -1,8 +1,10 @@
+# This workflow automatically compiles cv.tex in the folder curriculum/ and creates cv.pdf
+# This Github Action is triggered by modifications to the data in the _data/ folder.
 name: Latex Compiler
 on:
   push:
     paths:
-      - 'curriculum/test.tex'
+      - '_data/**.csv'
 
 jobs:
   build:
@@ -13,17 +15,17 @@ jobs:
     - name: Compile Latex Document
       uses: xu-cheng/latex-action@master
       with:
-        root_file: test.tex
+        root_file: cv.tex
         working_directory: curriculum
     - name: Check pdf files
       run: |
-        file curriculum/test.pdf | grep -q ' PDF '
+        file curriculum/cv.pdf | grep -q ' PDF '
     - name: Commit files
       run: |
         git config --local user.email "guillaume.garrigos@lpsm.paris"
         git config --local user.name "Guillaume-Garrigos"
-        git add curriculum/test.pdf
-        git commit -m "Add compiled Latex -> PDF document" -a
+        git add curriculum/cv.pdf
+        git commit -m "[Github Action] Compile cv.tex and create cv.pdf" -a
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
