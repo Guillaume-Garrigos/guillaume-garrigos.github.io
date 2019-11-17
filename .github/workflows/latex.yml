@@ -13,7 +13,7 @@ jobs:
         root_file: test.tex
     - name: Check pdf files
       run: |
-        file curriculum/cv.pdf | grep -q ' PDF '
+        file test.pdf | grep -q ' PDF '
     - name: Commit files
       run: |
         git config --local user.email "guillaume.garrigos@lpsm.paris"
