@@ -18,6 +18,7 @@ jobs:
       run: |
         git config --local user.email "guillaume.garrigos@lpsm.paris"
         git config --local user.name "Guillaume-Garrigos"
+        git add test.pdf
         git commit -m "Add compiled Latex -> PDF document" -a
     - name: Push changes
       uses: ad-m/github-push-action@master
