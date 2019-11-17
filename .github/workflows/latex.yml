@@ -1,5 +1,8 @@
 name: Latex Compiler
-on: [push]
+on:
+  push:
+    paths:
+      - 'curriculum/test.tex'
 
 jobs:
   build:
