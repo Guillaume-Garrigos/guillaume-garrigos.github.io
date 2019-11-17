@@ -14,14 +14,15 @@ jobs:
       uses: xu-cheng/latex-action@master
       with:
         root_file: test.tex
+        working_directory: curriculum
     - name: Check pdf files
       run: |
-        file test.pdf | grep -q ' PDF '
+        file curriculum/test.pdf | grep -q ' PDF '
     - name: Commit files
       run: |
         git config --local user.email "guillaume.garrigos@lpsm.paris"
         git config --local user.name "Guillaume-Garrigos"
-        git add test.pdf
+        git add curriculum/test.pdf
         git commit -m "Add compiled Latex -> PDF document" -a
     - name: Push changes
       uses: ad-m/github-push-action@master
