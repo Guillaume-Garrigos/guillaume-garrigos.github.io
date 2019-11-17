@@ -1,4 +1,4 @@
-%% start of file `template.tex'.
+%% This document is based on a template:
 %% Copyright 2006-2015 Xavier Danaux (xdanaux@gmail.com).
 %
 % This work may be distributed and/or modified under the
@@ -6,68 +6,27 @@
 % available at http://www.latex-project.org/lppl/.
 
 
-\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+%----------------------------------------------------
+%            GLOBAL OPTIONS
+%----------------------------------------------------
 
-% moderncv themes
-\moderncvstyle{casual}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
-\moderncvcolor{orange}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
-%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
-%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
-
-% character encoding
-%\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
-
-% adjust the page margins
+\documentclass[11pt,a4paper,sans]{moderncv} % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+\moderncvstyle{casual} % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
+\moderncvcolor{orange} % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
+\usepackage[colorlinks,unicode]{hyperref}
+\hypersetup{urlcolor = orange}
 \usepackage[scale=0.75]{geometry}
-%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
-%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
-% personal data
-\name{Guillaume}{Garrigos}
-\title{Curriculum Vitae}                               % optional, remove / comment the line if not wanted
-\address{Bâtiment Sophie Germain,
-Université Paris Diderot}{75205 Paris CEDEX 13}{}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
-%\phone[mobile]{+1~(234)~567~890}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
-%\phone[fixed]{+2~(345)~678~901}
-%\phone[fax]{+3~(456)~789~012}
-\email{garrigos@paris.lpsm}                               % optional, remove / comment the line if not wanted
-\homepage{www.guillaume-garrigos.com}                         % optional, remove / comment the line if not wanted
-%\social[linkedin]{john.doe}                        % optional, remove / comment the line if not wanted
-%\social[twitter]{jdoe}                             % optional, remove / comment the line if not wanted
-%\social[github]{jdoe}                              % optional, remove / comment the line if not wanted
-\extrainfo{French, 29, Single}                 % optional, remove / comment the line if not wanted
-\photo[96pt][0.1pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
-%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
-
-% bibliography adjustements (only useful if you make citations in your resume, or print a list of publications using BibTeX)
-%   to show numerical labels in the bibliography (default is to show no labels)
-\makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
-%   to redefine the bibliography heading string ("Publications")
-%\renewcommand{\refname}{Articles}
-
-% bibliography with mutiple entries
-%\usepackage{multibib}
-%\newcites{book,misc}{{Books},{Others}}
 
 %----------------------------------------------------------------------------------
-%            data
-%----------------------------------------------------------------------------------
-% This is to load data from .csv files in my repertory
-% we use a RAW import to avoid conflict with special characters like # and &
-\usepackage{datatool}
-\DTLloadrawdb[]{papers}{../_data/papers.csv}
-\DTLloadrawdb[]{talks}{../_data/talks.csv}
-
-%----------------------------------------------------------------------------------
-%            content
+%            CUSTOM FUNCTIONS & ENVIRONMENTS
 %----------------------------------------------------------------------------------
 
-% customize the enumerate environments (i.e. enumerate, itemize, ...)
+% customize the enumerate environments
 \usepackage{enumitem}
 \setlist{nolistsep}
 
 % A custom version of the \cventry command that supports large itemized lists
-% inside argument #7 (the custom cvitemize lists should be used!)
 \newcommand*{\cventrylong}[7][.25em]{%
   \begin{tabular}{@{}p{\hintscolumnwidth}@{\hspace{\separatorcolumnwidth}}p{\maincolumnwidth}@{}}%
     \raggedleft\hintstyle{#2} &{%
@@ -79,17 +38,36 @@ Université Paris Diderot}{75205 Paris CEDEX 13}{}% optional, remove / comment t
   \end{tabular}%
   {\small#7}%
   \par\addvspace{#1}}
+
 % A custom version of the itemize environment that sets the appropriate left
 % margin for use inside \cventylong
 \newlist{cvitemize}{itemize}{1}
 \setlist[cvitemize]{label=\labelitemi,%
 leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
 
-\usepackage[misc]{ifsym}
-\usepackage[colorlinks,unicode]{hyperref}
-\hypersetup{
-    urlcolor = orange
-}
+\usepackage[misc]{ifsym} % Special character for documents
+
+%----------------------------------------------------
+%            HEADER INFORMATION
+%----------------------------------------------------
+
+\name{Guillaume}{Garrigos}
+\title{Curriculum Vitae}
+\photo[96pt][0.1pt]{picture} % [#1] is the height the picture must be resized to, [#2] is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+
+%----------------------------------------------------
+%            DATA TO BE IMPORTED
+%----------------------------------------------------
+
+% This is to load data from .csv files in my repertory
+% we use a RAW import to avoid conflict with special characters like # and &
+\usepackage{datatool}
+\DTLloadrawdb[]{papers}{../_data/papers.csv}
+\DTLloadrawdb[]{talks}{../_data/talks.csv}
+
+%----------------------------------------------------
+%            DOCUMENT
+%----------------------------------------------------
 
 \begin{document}
 
@@ -97,172 +75,119 @@ leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
 \pagestyle{empty}
 
 \section{Personal information and contact}
-\cvitem{\faUser}{Born in Toulouse (France), May 8th 1989. 30 y.o.}
-\cvitem{\faEnvelopeO}{Bâtiment Sophie Germain,
-Université Paris Diderot,
-75205 Paris CEDEX 13, France. }
-\cvitem{\faAt}{garrigos@lpsm.paris}
-\cvitem{\faGlobe}{\link[http://guillaume-garrigos.com]{http://guillaume-garrigos.com}}
-%\cvitem{\faCommentingO}{\link[http://www.nearlyoptimal.guillaume-garrigos.com]{http://www.nearlyoptimal.guillaume-garrigos.com}}
+	\cvitem{\faUser}{Born in Toulouse (France), May 8th 1989. 30 y.o.}
+	\cvitem{\faEnvelopeO}{Bâtiment Sophie Germain,
+Université de Paris,
+75205 Paris CEDEX 13, France.}
+	\cvitem{\faAt}{guillaume.garrigos@lpsm.paris}
+	\cvitem{\faGlobe}{\link[http://guillaume-garrigos.com]{http://guillaume-garrigos.com}}
 
 \section{Current position (2018--~)}
-\cvitem{position}{\textbf{Maître de conférences} at Université Paris Diderot}
-\cvitem{affiliation}{Laboratoire de Probabilités, Statistique et Modélisation (LPSM, UMR 8001)}
-\cvitem{research interests}{
-optimization, statistical machine learning, inverse problems, image and signal processing, algorithms and continuous dynamical systems, tame optimization.
-}
+	\cvitem{position}{\textbf{Maître de conférences} at Université de Paris}
+	\cvitem{affiliation}{Laboratoire de Probabilités, Statistique et Modélisation (LPSM, UMR 8001)}
+	\cvitem{research interests}{
+		optimization, statistical machine learning, inverse problems, image and signal processing, algorithms and continuous dynamical systems, tame optimization.
+	}
 
 \section{Previous positions (2015--2018)}
-\cventry{2017--2018}{Post-doc}{\'Ecole Normale Supérieure}{Paris, France}{}{
-Lab: Département de Mathématiques et Applications
-\newline{}%
-Main collaborator : Gabriel Peyr\'e (ENS, CNRS, INRIA)\newline{}%
-Research themes : inverse problems, signal and image processing, optimization
-}
-
-\cventry{2015--2017}{Post-doc}{Istituto Italiano di Tecnologia}{Genoa, Italy}{}{
-Lab: Laboratory for Computational and Statistical Learning
-\newline{}%
-Main collaborators : Lorenzo Rosasco (IIT, MIT) and Silvia Villa (IIT)
-\newline{}%
-Research themes : optimization and regularization methods for machine learning.
-}
+	\cventry{2017--2018}{Post-doc}{\'Ecole Normale Supérieure}{Paris, France}{}{
+		Lab: Département de Mathématiques et Applications
+		\newline{}%
+		Main collaborator : Gabriel Peyr\'e (ENS, CNRS, INRIA)\newline{}%
+		Research themes : inverse problems, signal and image processing, optimization
+	}
+	\cventry{2015--2017}{Post-doc}{Istituto Italiano di Tecnologia}{Genoa, Italy}{}{
+		Lab: Laboratory for Computational and Statistical Learning
+		\newline{}%
+		Main collaborators : Lorenzo Rosasco (IIT, MIT) and Silvia Villa (IIT)
+		\newline{}%
+		Research themes : optimization and regularization methods for machine learning.
+	}
 
 \section{Ph.D. thesis (2012--2015)}
-\cvitem{title}{\emph{Descent dynamical systems and algorithms for tame optimization and multi-objective problems} \link[\scriptsize{\PaperPortrait}]{https://tel.archives-ouvertes.fr/tel-01245406}}
-\cvitem{university}{Université de Montpellier (France) and Universidad Santa Maria (Valparaíso, Chile)}
-\cvitem{supervisors}{Hédy Attouch (UM) and Juan Peypouquet (USM)}
-\cvitem{committee}{Hédy Attouch, Aris Daniilidis, Jalal Fadili, Pedro Gajardo, Adrian Lewis, Juan Peypouquet, Lionel Thibault}
+	\cvitem{title}{\emph{Descent dynamical systems and algorithms for tame optimization and multi-objective problems} \link[\scriptsize{\PaperPortrait}]{https://tel.archives-ouvertes.fr/tel-01245406}}
+	\cvitem{university}{Université de Montpellier (France) and Universidad Santa Maria (Valparaíso, Chile)}
+	\cvitem{supervisors}{Hédy Attouch (UM) and Juan Peypouquet (USM)}
+	\cvitem{committee}{Hédy Attouch, Aris Daniilidis, Jalal Fadili, Pedro Gajardo, Adrian Lewis, Juan Peypouquet, Lionel Thibault}
 
 \section{Education and Degrees}
-\cventry{2013}{Agrégation de Mathématiques}{}{ranked 147/323}{}{}
-\cventry{2010--2012}{Master}{Université de Montpellier}{}{}{Mathématiques, Statistiques et Applications}  % arguments 3 to 6 can be left empty
-\cventry{2007--2010}{Licence}{Université de Montpellier}{}{}{Mathématiques Fondamentales et Appliquées}
-\cventry{2007}{Baccalauréat}{Lycée Diderot}{Narbonne}{}{}
+	\cventry{2013}{Agrégation de Mathématiques}{}{ranked 147/323}{}{}
+	\cventry{2010--2012}{Master}{Université de Montpellier}{}{}{Mathématiques, Statistiques et Applications}  % arguments 3 to 6 can be left empty
+	\cventry{2007--2010}{Licence}{Université de Montpellier}{}{}{Mathématiques Fondamentales et Appliquées}
+	\cventry{2007}{Baccalauréat}{Lycée Diderot}{Narbonne}{}{}
 
 \section{Teaching}
-\cvitem{2019-2020}{Optimization, CM-TD-TP, L3, 78h}
-\cvitem{}{Optimization for Machine Learning, CM, M2, 36h}
-\cvitem{}{Information Theory, TD, M1, 36h}
-\cvitem{}{Matrix Numerical Analysis, TD-TP, L3, 42h}
-\cvitem{2018-2019}{Optimization, TD, L3, 36h}
-\cvitem{}{Information Theory, TD, M1, 36h}
-\cvitem{}{Matrix Numerical Analysis, TD-TP, L3, 54h}
-\cvitem{2017}{Labs during the machine learning summer school RegML 2017, 8h}
-\cvitem{2014-2015}{Linear Algebra, CM-TD, L1, 128h}
-\cvitem{2012-2013}{Linear Algebra, CM-TD, L1, 64h}
+	\cvitem{2019-2020}{Optimization, CM-TD-TP, L3, 78h}
+	\cvitem{}{Optimization for Machine Learning, CM, M2, 36h}
+	\cvitem{}{Information Theory, TD, M1, 36h}
+	\cvitem{}{Matrix Numerical Analysis, TD-TP, L3, 42h}
+	\cvitem{2018-2019}{Optimization, TD, L3, 36h}
+	\cvitem{}{Information Theory, TD, M1, 36h}
+	\cvitem{}{Matrix Numerical Analysis, TD-TP, L3, 54h}
+	\cvitem{2017}{Labs during the machine learning summer school RegML 2017, 8h}
+	\cvitem{2014-2015}{Linear Algebra, CM-TD, L1, 128h}
+	\cvitem{2012-2013}{Linear Algebra, CM-TD, L1, 64h}
 
-\section{Publications}
-% Here we use the data from papers.csv
-\cventry{}{{Publications in international specialized journals}}{}{}{}{%
-\begin{itemize}
-\DTLforeach*[\DTLiseq{\status}{accepted-journal}]{papers}{\status=status, \title=title, \authors=authors, \ref=ref,\arxiv=arxiv}{
-	\item \authors. \textit{\title}. \ref.
-	\link[\scriptsize{\PaperPortrait}]{https://arxiv.org/abs/\arxiv}
-}
-\end{itemize}
-}
+\section{Publications} % Here we use the data from papers.csv
+	\cventry{}{{Publications in international specialized journals}}{}{}{}{%
+		\begin{itemize}
+			\DTLforeach*[\DTLiseq{\status}{accepted-journal}]{papers}{\status=status, \title=title, \authors=authors, \ref=ref,\arxiv=arxiv}{
+				\item \authors. \textit{\title}. \ref.
+				\link[\scriptsize{\PaperPortrait}]{https://arxiv.org/abs/\arxiv}
+			}
+		\end{itemize}
+	}
 
-\cventry{}{{Publications in international conferences}}{}{}{}{
-\begin{itemize}
-\DTLforeach*[\DTLiseq{\status}{accepted-conf}]{papers}{\status=status, \title=title, \authors=authors, \ref=ref,\arxiv=arxiv}{
-	\item \authors. \textit{\title}. \ref.
-	\link[\scriptsize{\PaperPortrait}]{https://arxiv.org/abs/\arxiv}
-}
-\end{itemize}
-}
+	\cventry{}{{Publications in international conferences}}{}{}{}{
+		\begin{itemize}
+			\DTLforeach*[\DTLiseq{\status}{accepted-conf}]{papers}{\status=status, \title=title, \authors=authors, \ref=ref,\arxiv=arxiv}{
+				\item \authors. \textit{\title}. \ref.
+				\link[\scriptsize{\PaperPortrait}]{https://arxiv.org/abs/\arxiv}
+			}
+		\end{itemize}
+	}
 
-\cventry{}{{Preprints}}{}{}{}{
-\begin{itemize}
-\DTLforeach*[\DTLiseq{\status}{preprint}]{papers}{\status=status, \title=title, \authors=authors, \arxiv=arxiv}{
-	\item \authors. \textit{\title}. Preprint on arXiv:\arxiv.
-	\link[\scriptsize{\PaperPortrait}]{https://arxiv.org/abs/\arxiv}
-}
-\end{itemize}
-}
+	\cventry{}{{Preprints}}{}{}{}{
+		\begin{itemize}
+			\DTLforeach*[\DTLiseq{\status}{preprint}]{papers}{\status=status, \title=title, \authors=authors, \arxiv=arxiv}{
+				\item \authors. \textit{\title}. Preprint on arXiv:\arxiv.
+				\link[\scriptsize{\PaperPortrait}]{https://arxiv.org/abs/\arxiv}
+			}
+		\end{itemize}
+	}
 
 \section{Miscellaneous}
-\cvitem{2019}{PEPS grant funded by INSMI (CNRS), 3,5k EUR.}
-
-\cvitem{2017}{SMAI-MODE Dodu Prize for the best young researcher talk: \textit{Structured sparsity in inverse problems and support recovery with mirror-stratifiable functions}.}
+	\cvitem{2019}{PEPS grant funded by INSMI (CNRS), 3,5k EUR.}
+	\cvitem{2017}{SMAI-MODE Dodu Prize for the best young researcher talk: \textit{Structured sparsity in inverse problems and support recovery with mirror-stratifiable functions}.}
 
 \section{Responsibilities}
-\subsection{Seminars, Events}
-\cvitem{2018}{Co-organizer of  the session "\textit{Dimensionality reduction tools for learning: A sketchy session}" for the International Symposium on Mathematical Programming (ISMP)}
-\cvitem{2017}{Organizer of the NORIA group meeting at ENS}
-\cvitem{2017}{Co-organizer of the Machine Learning summer school RegML 2017, in Oslo}
-\cvitem{2015--2017}{Organizer of the Machine Learning Tutorials, between the LCSL groups at IIT (Genova) and MIT (Boston)}
+	\subsection{Seminars, Events}
+		\cvitem{2018}{Co-organizer of  the session "\textit{Dimensionality reduction tools for learning: A sketchy session}" for the International Symposium on Mathematical Programming (ISMP)}
+		\cvitem{2017}{Organizer of the NORIA group meeting at ENS}
+		\cvitem{2017}{Co-organizer of the Machine Learning summer school RegML 2017, in Oslo}
+		\cvitem{2015--2017}{Organizer of the Machine Learning Tutorials, between the LCSL groups at IIT (Genova) and MIT (Boston)}
 
-\subsection{Editorial Activity}
-\cvitem{}{I am reviewing for various journals: SIAM Journal on Optimization,  SIAM Journal on Imaging Science, Mathematics of Operations Research, Optimization, Mathematical Methods of Operations Research, Journal of Optimization Theory and Applications,  Computational and Applied Mathematics, IEEE Computational Intelligence Magazine.}
+	\subsection{Editorial Activity}
+		\cvitem{}{
+			I am reviewing for various journals: SIAM Journal on Optimization,  SIAM Journal on Imaging Science, Mathematics of Operations Research, Optimization, Mathematical Methods of Operations Research, Journal of Optimization Theory and Applications,  Computational and Applied Mathematics, IEEE Computational Intelligence Magazine.
+		}
 
 
 \section{List of given talks}
-\cventrylong{}{}{}{}{}{
-\begin{small}
-\begin{itemize}
-\DTLforeach*{talks}{\date=date, \event=event, \institute=institute, \city=city, \country=country}{
-	\item \date ~ \event.
-	\DTLifnullorempty{\institute}{}{\institute, }\city,
-	\DTLifnullorempty{\country}{France}{\country}.%
-}	
-\end{itemize}
-\end{small}
-}
+	\cventrylong{}{}{}{}{}{
+		\begin{small}
+		\begin{itemize}
+			\DTLforeach*{talks}{\date=date, \event=event, \institute=institute, \city=city, \country=country}{
+				\item \date ~ \event.
+				\DTLifnullorempty{\institute}{}{\institute, }\city,
+				\DTLifnullorempty{\country}{France}{\country}.%
+			}	
+		\end{itemize}
+		\end{small}
+	}
 
-
-
-
-
-
-%\section{Languages}
-%\cvitemwithcomment{Language 1}{Skill level}{Comment}
-%\cvitemwithcomment{Language 2}{Skill level}{Comment}
-%\cvitemwithcomment{Language 3}{Skill level}{Comment}
-%
-%\section{Computer skills}
-%\cvdoubleitem{category 1}{XXX, YYY, ZZZ}{category 4}{XXX, YYY, ZZZ}
-%\cvdoubleitem{category 2}{XXX, YYY, ZZZ}{category 5}{XXX, YYY, ZZZ}
-%\cvdoubleitem{category 3}{XXX, YYY, ZZZ}{category 6}{XXX, YYY, ZZZ}
-%
-%\section{Interests}
-%\cvitem{hobby 1}{Description}
-%\cvitem{hobby 2}{Description}
-%\cvitem{hobby 3}{Description}
-%
-%\section{Extra 1}
-%\cvlistitem{Item 1}
-%\cvlistitem{Item 2}
-%\cvlistitem{Item 3. This item is particularly long and therefore normally spans over several lines. Did you notice the indentation when the line wraps?}
-%
-%\section{Extra 2}
-%\cvlistdoubleitem{Item 1}{Item 4}
-%\cvlistdoubleitem{Item 2}{Item 5\cite{book1}}
-%\cvlistdoubleitem{Item 3}{Item 6. Like item 3 in the single column list before, this item is particularly long to wrap over several lines.}
-
-%\section{References}
-%\begin{cvcolumns}
-%  \cvcolumn{Category 1}{\begin{itemize}\item Person 1\item Person 2\item Person 3\end{itemize}}
-%  \cvcolumn{Category 2}{Amongst others:\begin{itemize}\item Person 1, and\item Person 2\end{itemize}(more upon request)}
-%  \cvcolumn[0.5]{All the rest \& some more}{\textit{That} person, and \textbf{those} also (all available upon request).}
-%\end{cvcolumns}
-
-% Publications from a BibTeX file without multibib
-%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
-%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
-\nocite{*}
-\bibliographystyle{plain}
-\bibliography{publications}                        % 'publications' is the name of a BibTeX file
-
-% Publications from a BibTeX file using the multibib package
-%\section{Publications}
-%\nocitebook{book1,book2}
-%\bibliographystylebook{plain}
-%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
-%\nocitemisc{misc1,misc2,misc3}
-%\bibliographystylemisc{plain}
-%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
 \end{document}
 
-
-%% end of file `template.tex'.
+%----------------------------------------------------
+%            END
+%----------------------------------------------------
