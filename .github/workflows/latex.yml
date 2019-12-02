@@ -5,6 +5,7 @@ on:
   push:
     paths:
       - '_data/**.csv'
+      - '.github/workflows/latex.trigger'
 
 jobs:
   build:
