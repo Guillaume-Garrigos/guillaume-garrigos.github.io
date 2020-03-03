@@ -3,24 +3,6 @@ title: Research
 layout: default
 ---
 
-# Preprints
-
----
-
-{% for paper in site.data.papers %}
-{% if paper.status == "preprint" %}
-{{ paper.authors-html }} <br>
-**{{ paper.title }}** <br>
-Preprint on [arXiv:{{ paper.arxiv }}](https://arxiv.org/abs/{{ paper.arxiv }})
-{%- if paper.link-slides -%}
-, [slides](/assets/slides/{{ paper.link-slides }}.pdf)
-{%- endif -%}.
-
----
-{% endif %}
-{% endfor %}
-
-
 # Accepted papers in refereed journals
 
 ---
@@ -58,6 +40,24 @@ Links: [editor]({{ paper.link-editor }}),
 ---
 {% endif %}
 {% endfor %}
+
+# Preprints
+
+---
+
+{% for paper in site.data.papers %}
+{% if paper.status == "preprint" %}
+{{ paper.authors-html }} <br>
+**{{ paper.title }}** <br>
+Preprint on [arXiv:{{ paper.arxiv }}](https://arxiv.org/abs/{{ paper.arxiv }})
+{%- if paper.link-slides -%}
+, [slides](/assets/slides/{{ paper.link-slides }}.pdf)
+{%- endif -%}.
+
+---
+{% endif %}
+{% endfor %}
+
 
 # Ph. D. Thesis
 
