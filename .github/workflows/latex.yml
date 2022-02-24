@@ -18,6 +18,7 @@ jobs:
       with:
         root_file: cv.tex
         working_directory: curriculum
+        latexmk_use_lualatex: true
     - name: Check pdf files
       run: |
         file curriculum/cv.pdf | grep -q ' PDF '
