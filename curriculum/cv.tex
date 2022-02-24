@@ -17,6 +17,12 @@
 \hypersetup{urlcolor = orange}
 \usepackage[scale=0.75]{geometry}
 
+\newif\iflongcv
+\ifdefined\ActivateLONGCV % Must be passed as an option of latexmk see https://tex.stackexchange.com/questions/64245/latexmk-using-jobname-and-a-command-line-def
+	\longcvtrue
+\else
+	\longcvfalse
+\fi
 
 %----------------------------------------------------------------------------------
 %            CUSTOM FUNCTIONS & ENVIRONMENTS
@@ -147,6 +153,9 @@ Université de Paris,
 		\end{itemize}
 	}
 	
+	
+	
+\iflongcv{%	
 \section{Teaching} % Here we use data from teaching.csv
 \vspace*{-1em}
 	\cventrylong{}{}{}{}{}{%
@@ -163,7 +172,7 @@ Université de Paris,
 			}%
 		\end{small}
 	}	
-	
+}\fi % teaching
 	
 	
 	
@@ -184,7 +193,7 @@ Université de Paris,
 			I am reviewing for various journals: SIAM Journal on Optimization,  SIAM Journal on Imaging Science, Mathematics of Operations Research, Optimization, Mathematical Methods of Operations Research, Journal of Optimization Theory and Applications,  Computational and Applied Mathematics, IEEE Computational Intelligence Magazine.
 		}
 
-
+\iflongcv{%
 \section{List of given talks}
 \vspace*{-1em}
 	\cventrylong{}{}{}{}{}{
@@ -198,6 +207,7 @@ Université de Paris,
 		\end{itemize}
 		\end{small}
 	}
+}\fi % talks
 
 \end{document}
 

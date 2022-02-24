@@ -16,17 +16,21 @@ jobs:
     - name: Compile Latex Document
       uses: Guillaume-Garrigos/latex-action@master
       with:
-        root_file: cv.tex
+        root_file: |
+          cv.tex
+          cv_long.tex
         working_directory: curriculum
     - name: Check pdf files
       run: |
         file curriculum/cv.pdf | grep -q ' PDF '
+        file curriculum/cv_long.pdf | grep -q ' PDF '
     - name: Commit files
       run: |
         git config --local user.email "guillaume.garrigos@lpsm.paris"
         git config --local user.name "Guillaume-Garrigos"
         git add curriculum/cv.pdf
-        git commit -m "[Github Action] Compile cv.tex and create cv.pdf" -a
+        git add curriculum/cv_long.pdf
+        git commit -m "[Github Action] Compile cv and create cv.pdf and cv_long.pdf" -a
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
