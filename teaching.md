@@ -11,11 +11,9 @@ layout: default
 ---
 
 {%- endif -%}
+
 - **{{ teaching.level }}: {{ teaching.class }}**<br>
-  Main professor: {{ teaching.main }}. 
-{%- if teaching.assistant -%}
-Assistant(s): {{ teaching.assistant }}.
-{%- endif -%}
+  Main professor: {{ teaching.main }}. {%- if teaching.assistant -%}Assistant(s): {{ teaching.assistant }}.{%- endif -%}
 {%- if teaching.comment -%}
 <br>
   {{ teaching.comment }}
