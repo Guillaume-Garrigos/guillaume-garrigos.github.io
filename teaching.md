@@ -6,8 +6,6 @@ layout: default
 {% for teaching in site.data.teaching %}
 {% if teaching.year %}
 
-----
-
 # {{ teaching.year }}
 
 {% endif %}
