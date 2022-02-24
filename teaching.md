@@ -4,18 +4,18 @@ layout: default
 ---
 
 {% for teaching in site.data.teaching %}
-{%- if teaching.year -%}
+{% if teaching.year %}
 
 # {{ teaching.year }}
 
-{%- endif -%}
----
+{% endif %}
+----
 - **{{ teaching.level }}: {{ teaching.class }}**<br>
   Main professor: {{ teaching.main }}. 
 
-{% endfor %}
+{%- endfor -%}
 
----
+----
 
 
 
