@@ -3,10 +3,17 @@ title: Enseignement
 layout: default
 ---
 
+{% assign first_year = true %}
+
 {% for teaching in site.data.teaching %}
 {% if teaching.year %}
 
+{% if first_year = false %}
+
 ----
+
+{% endif %}
+{% assign first_year = false %}
 
 # {{ teaching.year }}
 
