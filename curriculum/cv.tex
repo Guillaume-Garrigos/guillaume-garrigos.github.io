@@ -64,6 +64,7 @@ leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
 \usepackage{datatool}
 \DTLloadrawdb[]{papers}{../_data/papers.csv}
 \DTLloadrawdb[]{talks}{../_data/talks.csv}
+\DTLloadrawdb[]{teaching}{../_data/teaching.csv}
 
 %----------------------------------------------------
 %            DOCUMENT
@@ -75,7 +76,7 @@ leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
 \pagestyle{empty}
 
 \section{Personal information and contact}
-	\cvitem{\faUser}{Born in Toulouse (France), May 8th 1989. 30 y.o.}
+	\cvitem{\faUser}{Born in Toulouse (France), May 8th 1989.}
 	\cvitem{\faEnvelopeO}{Bâtiment Sophie Germain,
 Université de Paris,
 75205 Paris CEDEX 13, France.}
@@ -116,23 +117,13 @@ Université de Paris,
 	\cventry{2007--2010}{Licence}{Université de Montpellier}{}{}{Mathématiques Fondamentales et Appliquées}
 	\cventry{2007}{Baccalauréat}{Lycée Diderot}{Narbonne}{}{}
 
-\section{Teaching}
-	\cvitem{2019-2020}{Optimization, CM-TD-TP, L3, 78h}
-	\cvitem{}{Optimization for Machine Learning, CM, M2, 36h}
-	\cvitem{}{Information Theory, TD, M1, 36h}
-	\cvitem{}{Matrix Numerical Analysis, TD-TP, L3, 42h}
-	\cvitem{2018-2019}{Optimization, TD, L3, 36h}
-	\cvitem{}{Information Theory, TD, M1, 36h}
-	\cvitem{}{Matrix Numerical Analysis, TD-TP, L3, 54h}
-	\cvitem{2017}{Labs during the machine learning summer school RegML 2017, 8h}
-	\cvitem{2014-2015}{Linear Algebra, CM-TD, L1, 128h}
-	\cvitem{2012-2013}{Linear Algebra, CM-TD, L1, 64h}
+
 
 \section{Publications} % Here we use the data from papers.csv
 	\cventry{}{{Publications in international specialized journals}}{}{}{}{%
 		\begin{itemize}
 			\DTLforeach*[\DTLiseq{\status}{accepted-journal}]{papers}{\status=status, \title=title, \authors=authors, \ref=ref,\arxiv=arxiv}{
-				\item \authors. \textit{\title}. \ref.
+				\item \authors. \textit{\title}, \ref \ 
 				\link[\scriptsize{\PaperPortrait}]{https://arxiv.org/abs/\arxiv}
 			}
 		\end{itemize}
@@ -141,8 +132,8 @@ Université de Paris,
 	\cventry{}{{Publications in international conferences}}{}{}{}{
 		\begin{itemize}
 			\DTLforeach*[\DTLiseq{\status}{accepted-conf}]{papers}{\status=status, \title=title, \authors=authors, \ref=ref,\arxiv=arxiv}{
-				\item \authors. \textit{\title}. \ref.
-				\link[\scriptsize{\PaperPortrait}]{https://arxiv.org/abs/\arxiv}
+				\item \authors. \textit{\title}, \ref \ 
+				\link[\scriptsize{\PaperPortrait}]{https://arxiv.org/abs/\arxiv}%
 			}
 		\end{itemize}
 	}
@@ -155,6 +146,27 @@ Université de Paris,
 			}
 		\end{itemize}
 	}
+	
+\section{Teaching} % Here we use data from teaching.csv
+\vspace*{-1em}
+	\cventrylong{}{}{}{}{}{%
+		\begin{small}
+			\DTLforeach*{teaching}{\year=year, \class=class, \type=type, \level=level, \hours=hours, \comment=comment, \URL=url, \comment=comment}{%
+				\cvitem{\year}{%
+				\class, \type, \level, \hours h%
+				\DTLifnullorempty{\comment}{}{ (\comment)}
+				\DTLifnullorempty{\URL}{}{\ \link[\scriptsize{\faGlobe}]{\URL}}
+				}%
+%				\item \date ~ \event.
+%				\DTLifnullorempty{\institute}{}{\institute, }\city,
+%				\DTLifnullorempty{\country}{France}{\country}.%
+			}%
+		\end{small}
+	}	
+	
+	
+	
+	
 
 \section{Miscellaneous}
 	\cvitem{2019}{PEPS grant funded by INSMI (CNRS), 3,5k EUR.}
@@ -162,11 +174,11 @@ Université de Paris,
 
 \section{Responsibilities}
 	\subsection{Seminars, Events}
+		\cvitem{2019}{Co-organizer of the workshop "\textit{Regularisation for Inverse Problems and Machine Learning}", in Paris \link[\scriptsize{\faGlobe}]{https://invprob-ml-workshop.github.io/}}
 		\cvitem{2018}{Co-organizer of  the session "\textit{Dimensionality reduction tools for learning: A sketchy session}" for the International Symposium on Mathematical Programming (ISMP)}
 		\cvitem{2017}{Organizer of the NORIA group meeting at ENS}
-		\cvitem{2017}{Co-organizer of the Machine Learning summer school RegML 2017, in Oslo}
+		\cvitem{2017}{Co-organizer of the Machine Learning summer school RegML 2017, in Oslo \link[\scriptsize{\faGlobe}]{http://lcsl.mit.edu/courses/regml/regml2017/}}
 		\cvitem{2015--2017}{Organizer of the Machine Learning Tutorials, between the LCSL groups at IIT (Genova) and MIT (Boston)}
-
 	\subsection{Editorial Activity}
 		\cvitem{}{
 			I am reviewing for various journals: SIAM Journal on Optimization,  SIAM Journal on Imaging Science, Mathematics of Operations Research, Optimization, Mathematical Methods of Operations Research, Journal of Optimization Theory and Applications,  Computational and Applied Mathematics, IEEE Computational Intelligence Magazine.
@@ -174,6 +186,7 @@ Université de Paris,
 
 
 \section{List of given talks}
+\vspace*{-1em}
 	\cventrylong{}{}{}{}{}{
 		\begin{small}
 		\begin{itemize}
