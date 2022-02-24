@@ -14,11 +14,10 @@ jobs:
     - name: Set up Git repository
       uses: actions/checkout@master
     - name: Compile Latex Document
-      uses: xu-cheng/latex-action@master
+      uses: Guillaume-Garrigos/latex-action@master
       with:
         root_file: cv.tex
         working_directory: curriculum
-        latexmk_use_lualatex: true
     - name: Check pdf files
       run: |
         file curriculum/cv.pdf | grep -q ' PDF '
