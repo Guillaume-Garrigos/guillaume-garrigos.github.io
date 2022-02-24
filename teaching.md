@@ -20,6 +20,8 @@ layout: default
 <br>
   Material for the class: [link]({{ teaching.link }}).
 {%- endif -%}
+
+---
 {% endfor %}
 
 ---
