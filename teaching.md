@@ -3,17 +3,17 @@ title: Enseignement
 layout: default
 ---
 
-{% assign first_year = true %}
+{% increment my_counter %}
 
 {% for teaching in site.data.teaching %}
 {% if teaching.year %}
+{% increment my_counter %}
 
-{% if first_year = false %}
+{% if my_counter = 1 %}
 
 ----
 
 {% endif %}
-{% assign first_year = false %}
 
 # {{ teaching.year }}
 
