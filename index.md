@@ -12,5 +12,6 @@ Even before that I did a PhD in Optimization between the [Université de Montpel
 My research essentially focuses on dynamical systems associated to optimization problems. 
 In particular, I am interested in algorithms and regularization methods for nonsmooth (eventually nonconvex) problems arising in signal/image processing and machine learning. 
 I am particularly interested in the interplay between the modelization of a learning/inverse problem as an optimization problem, and its resolution. 
-My papers are [here](/research).
+
+Here are my [papers](/research), my [curriculum](/curriculum/cv.pdf) (and its [extended](/curriculum/cv_long.pdf) version).
 	 
