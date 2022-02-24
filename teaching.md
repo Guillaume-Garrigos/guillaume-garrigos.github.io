@@ -23,8 +23,6 @@ layout: default
 
 {% endfor %}
 
-----
-
 
 
 
