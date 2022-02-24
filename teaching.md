@@ -1,5 +1,5 @@
 ---
-title: Enseignement
+title: Teaching
 layout: default
 ---
 
