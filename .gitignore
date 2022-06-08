@@ -358,8 +358,10 @@ TSWLatexianTemp*
 # Kile
 *.backup
 
-
+# csv tmp file
+.~*
 
 
 
 # End of https://www.gitignore.io/api/git,ruby,latex,jekyll,visualstudiocode
+
