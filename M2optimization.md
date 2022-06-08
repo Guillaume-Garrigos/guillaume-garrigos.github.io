@@ -5,7 +5,8 @@ layout: default
 
 # M2 Optimization for Machine Learning
 
-This page collects the material for the class "Optimization for Machine Learning" (M2 MIDS-M2MO) at Université de Paris Cité
+This page collects the material for the class "Optimization for Machine Learning" (M2 MIDS-M2MO) at Université de Paris Cité. 
+Students following the class should go to the associated [Moodle](https://moodle.u-paris.fr/course/view.php?id=6146) page, which is updated regularly.
 
 ## Course (Slides)
 
