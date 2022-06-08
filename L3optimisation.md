@@ -14,11 +14,11 @@ Les étudiants inscrits au cours devraient consulter la page [Moodle](https://mo
 
 ## Exercices (TD)
 
-[Elements d'Algèbre Linéaire et de Calcul Différentiel](https://cloud.math.univ-paris-diderot.fr/s/if8ZtoeGXmJx5xy/download)
-[Existence de minimiseurs et conditions d'optimalité](https://cloud.math.univ-paris-diderot.fr/s/WqWyBZ6t4TBiBan/download)
-[Convexité(s)](https://cloud.math.univ-paris-diderot.fr/s/TP4KFSToaqotPcT/download)
-[Algorithmes de minimisation sans contrainte](https://cloud.math.univ-paris-diderot.fr/s/ENPtfTA7Cxzywqk/download)
-[Théorèmes de Lagrange-KKT](https://cloud.math.univ-paris-diderot.fr/s/QfaAtxakNRRQE7w/download)
+1. [Elements d'Algèbre Linéaire et de Calcul Différentiel](https://cloud.math.univ-paris-diderot.fr/s/if8ZtoeGXmJx5xy/download)
+2. [Existence de minimiseurs et conditions d'optimalité](https://cloud.math.univ-paris-diderot.fr/s/WqWyBZ6t4TBiBan/download)
+3. [Convexité(s)](https://cloud.math.univ-paris-diderot.fr/s/TP4KFSToaqotPcT/download)
+4. [Algorithmes de minimisation sans contrainte](https://cloud.math.univ-paris-diderot.fr/s/ENPtfTA7Cxzywqk/download)
+5. [Théorèmes de Lagrange-KKT](https://cloud.math.univ-paris-diderot.fr/s/QfaAtxakNRRQE7w/download)
 
 ## Travaux Pratiques (TP)
 
