@@ -3,7 +3,7 @@ layout: homepage
 title: Homepage
 ---
 
-I am  Maître de Conférences at the [Université Paris 7 Diderot](https://universite.univ-paris-diderot.fr/), member of the [Laboratoire de Probabilités, Statistique et Modélisation](https://www.lpsm.paris/) (Team [Statistique, données, algorithmes](https://www.lpsm.paris/recherche/les-equipes/%C3%A9quipe-statistique/)).
+I am  Maître de Conférences at the [Université de Paris Cité](https://u-paris.fr/) (formerly Université de Paris, or Paris-Diderot, or Paris-7), member of the [Laboratoire de Probabilités, Statistique et Modélisation](https://www.lpsm.paris/), in the Team [Statistique, données, algorithmes](https://www.lpsm.paris/recherche/les-equipes/%C3%A9quipe-statistique/).
 
 Formerly, I used to be a postdoc researcher at the [École Normale Supérieure](http://www.ens.fr/) ([DMA](http://www.math.ens.fr/)), member of the [NORIA](http://www.gpeyre.com/noria/) (Numerical Optimal tRansport for ImAging) research group.
 Before that, I had a two-years postdoc position at the [Laboratory for Computational and Statistical Learning](http://lcsl.mit.edu), a joint lab between the [IIT](https://www.iit.it/it/home) and [MIT](http://web.mit.edu/).
@@ -13,5 +13,5 @@ My research essentially focuses on dynamical systems associated to optimization 
 In particular, I am interested in algorithms and regularization methods for nonsmooth (eventually nonconvex) problems arising in signal/image processing and machine learning. 
 I am particularly interested in the interplay between the modelization of a learning/inverse problem as an optimization problem, and its resolution. 
 
-Here are my [papers](/research), my [curriculum](/curriculum/cv.pdf) (and its [extended](/curriculum/cv_long.pdf) version).
+Here are my [papers](/research), my [curriculum](/curriculum/cv.pdf) (and its [extended](/curriculum/cv_long.pdf) version), and [teaching](/teaching) (with some related material).
 	 
