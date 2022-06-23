@@ -13,7 +13,7 @@ Students following the class should go to the associated [Moodle](https://moodle
 1. [Introduction](https://cloud.math.univ-paris-diderot.fr/s/N4txRopGp9d66CA/download)
 2. [Gradient Dynamics : Convex Problems](https://cloud.math.univ-paris-diderot.fr/s/2ERoZ3wfmkdYFg8/download)
 3. [Gradient Dynamics : Non Convex problems](https://cloud.math.univ-paris-diderot.fr/s/gC7G9tasa2mbEbG/download)
-4. [Stochastic Gradient Methods : Vanilla](https://cloud.math.univ-paris-diderot.fr/s/rx2zg3iWPC6WBaG/download)
+4. [Stochastic Gradient Methods : Vanilla](https://cloud.math.univ-paris-diderot.fr/s/wrziXSSKLNmsXgz/download)
 5. [Stochastic Gradient Methods : Minibatches and Samplings](https://cloud.math.univ-paris-diderot.fr/s/EjwaJNE5C7qgYwS/download)
 6. [Towards Optimal Methods : Inertial Dynamics](https://cloud.math.univ-paris-diderot.fr/s/cbYHK6rNoPbrJCG/download)
 7. [Towards Optimal Methods : Variance Reduced Methods](https://cloud.math.univ-paris-diderot.fr/s/AkXEJNXfsJ5NXoL/download)
