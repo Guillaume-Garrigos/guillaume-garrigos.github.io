@@ -218,7 +218,7 @@ Université de Paris,
 		\begin{itemize}
 			\DTLforeach*{diffusion}{\date=date, \type=type, \event=event, \title=title, \location=location, \city=city}{
 				\item \date ~ \type : \event.
-				\DTLifnullorempty{\title}{}{\textit{\title.}}
+				%\DTLifnullorempty{\title}{}{\textit{\title.}}
 				\DTLifnullorempty{\location}{}{\location, }\city.%
 			}	
 		\end{itemize}
