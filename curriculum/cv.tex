@@ -71,6 +71,7 @@ leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
 \DTLloadrawdb[]{papers}{../_data/papers.csv}
 \DTLloadrawdb[]{talks}{../_data/talks.csv}
 \DTLloadrawdb[]{teaching}{../_data/teaching.csv}
+\DTLloadrawdb[]{diffusion}{../_data/diffusion.csv}
 
 %----------------------------------------------------
 %            DOCUMENT
@@ -194,7 +195,7 @@ Université de Paris,
 		}
 
 \iflongcv{%
-\section{List of given talks}
+\section{List of given research talks}
 \vspace*{-1em}
 	\cventrylong{}{}{}{}{}{
 		\begin{small}
@@ -203,6 +204,22 @@ Université de Paris,
 				\item \date ~ \event.
 				\DTLifnullorempty{\institute}{}{\institute, }\city,
 				\DTLifnullorempty{\country}{France}{\country}.%
+			}	
+		\end{itemize}
+		\end{small}
+	}
+}\fi % talks
+
+\iflongcv{%
+\section{List of Science Communication activities}
+\vspace*{-1em}
+	\cventrylong{}{}{}{}{}{
+		\begin{small}
+		\begin{itemize}
+			\DTLforeach*{diffusion}{\date=date, \type=type, \event=event, \title=title, \location=location, \city=city}{
+				\item \date ~ \type : \event.
+				%\DTLifnullorempty{\title}{}{\textit{\title.}}
+				\DTLifnullorempty{\location}{}{\location, }\city.%
 			}	
 		\end{itemize}
 		\end{small}
