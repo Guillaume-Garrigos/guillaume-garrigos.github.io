@@ -10,5 +10,5 @@ In particular, I am interested in algorithms and regularization methods for nons
 I am particularly interested in the interplay between the modeling of a learning/inverse problem as an optimization problem, and its resolution. 
 
 You can navigate to find more details about my [research](/research) and [teaching](/teaching) activities, as well as some related material.
-Here is my automatically generated [curriculum](/curriculum/cv.pdf) (and its [way-too-detailed](/curriculum/cv_long.pdf) extension).
+Here is my automatically generated [curriculum](/curriculum/cv.pdf) (and its [overly-detailed](/curriculum/cv_long.pdf) extension).
 	 
