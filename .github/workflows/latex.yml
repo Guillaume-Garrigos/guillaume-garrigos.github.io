@@ -5,6 +5,8 @@ on:
   push:
     paths:
       - '_data/**.csv'
+      - 'curriculum/cv.tex'
+      - 'curriculum/cv_long.tex'
       - '.github/workflows/latex.trigger'
 
 jobs:
