@@ -122,7 +122,6 @@ build-iPhoneSimulator/
 *.cb
 *.cb2
 .*.lb
-/curriculum/*.pdf
 
 ## Intermediate documents:
 *.dvi
