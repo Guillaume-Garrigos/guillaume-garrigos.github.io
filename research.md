@@ -14,6 +14,9 @@ layout: default
 {%- if paper.status == "accepted-journal" or paper.status == "accepted-conf" -%}
 {{ paper.ref }} <br>
 {%- endif -%}  
+{%- if paper.status == "preprint" -%}
+Posted online on {{ paper.date }} <br>
+{%- endif -%}  
 Links: [arXiv:{{ paper.arxiv }}](https://arxiv.org/abs/{{ paper.arxiv }})
 {%- if paper.status == "accepted-journal" or paper.status == "accepted-conf" -%}
 , [editor]({{ paper.link-editor }})
