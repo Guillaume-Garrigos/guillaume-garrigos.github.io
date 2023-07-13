@@ -11,9 +11,9 @@ layout: default
 {% for paper in site.data.papers %}
 {{ paper.authors-html }} <br>
 **{{ paper.title }}** <br>
-{% if paper.status == "accepted-journal" or paper.status == "accepted-conf" %}
+{%- if paper.status == "accepted-journal" or paper.status == "accepted-conf" -%}
 {{ paper.ref }} <br>
-{% endif %}  
+{%- endif -%}  
 Links: [arXiv:{{ paper.arxiv }}](https://arxiv.org/abs/{{ paper.arxiv }})
 {%- if paper.status == "accepted-journal" or paper.status == "accepted-conf" -%}
 , [editor]({{ paper.link-editor }})
