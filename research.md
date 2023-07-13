@@ -15,9 +15,9 @@ layout: default
 {{ paper.ref }} <br>
 {% endif %}  
 Links: [arXiv:{{ paper.arxiv }}](https://arxiv.org/abs/{{ paper.arxiv }})
-{% if paper.status == "accepted-journal" or paper.status == "accepted-conf" %}
+{%- if paper.status == "accepted-journal" or paper.status == "accepted-conf" -%}
 , [editor]({{ paper.link-editor }})
-{% endif %}  
+{%- endif -%}  
 {%- if paper.link-slides -%}
 , [slides](/assets/slides/{{ paper.link-slides }}.pdf)
 {%- endif -%}.
