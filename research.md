@@ -12,7 +12,7 @@ layout: default
 {% if paper.status == "preprint" %}
 {{ paper.authors-html }} <br>
 **{{ paper.title }}** <br>
-Preprint on [arXiv:{{ paper.arxiv }}](https://arxiv.org/abs/{{ paper.arxiv }})
+Preprint available on [arXiv:{{ paper.arxiv }}](https://arxiv.org/abs/{{ paper.arxiv }})
 {%- if paper.link-slides -%}
 , [slides](/assets/slides/{{ paper.link-slides }}.pdf)
 {%- endif -%}.
