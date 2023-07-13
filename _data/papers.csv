@@ -1,5 +1,5 @@
 date,title,authors,authors-html,status,ref,arxiv,link-editor,link-slides
-2023-06-20,Online Inventory Problems: Beyond the i.i.d. Setting with Online Convex Optimization,"M. Hihat, S. Gaïffas, G. Garrigos and S. Bussy","M. Hihat, S. Gaïffas, G. Garrigos and S. Bussy",preprint,,XXXX,,
+2023-07-12,Online Inventory Problems: Beyond the i.i.d. Setting with Online Convex Optimization,"M. Hihat, S. Gaïffas, G. Garrigos and S. Bussy","M. Hihat, <a href=""https://stephanegaiffas.github.io/"">S. Gaïffas</a>, G. Garrigos and <a href=""https://simonbussy.com/"">S. Bussy</a>",preprint,,2307.06048,,
 2023-06-04,Provable convergence guarantees for black-box variational inference,"J. Domke, G. Garrigos and R. M. Gower","<a href=""https://people.cs.umass.edu/~domke/"">J. Domke</a>, G. Garrigos and <a href=""https://gowerrobert.github.io/"">R. M. Gower</a>",preprint,,2306.03638,,
 2023-01-26,Handbook of Convergence Theorems for (Stochastic) Gradient Methods,G. Garrigos and R. M. Gower,"G. Garrigos and <a href=""https://gowerrobert.github.io/"">R. M. Gower</a>",preprint,,2301.11235,,
 2023-01-24,Square distance functions are Polyak-Łojasiewicz and vice-versa,G. Garrigos,G. Garrigos,preprint,,2301.10332,,
