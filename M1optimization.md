@@ -12,14 +12,11 @@ Tout le contenu du cours disponible se trouve [ici](https://cloud.math.univ-pari
 ## Course 
 
 1. Ensembles convexes
-2. Analyse convexe non-lisse
-    a. Fonctions convexes semi-continues
-    b. Sous-differentielle
-    c. Conjuguée de Fenchel
-    d. Dualité convexe
-3. Algorithmes pour l'optimisation convexe
-    a. Méthodes élémentaires
-    b. Méthodes d'éclatement
+2. Fonctions convexes semi-continues
+3. Sous-differentielle
+4. Conjuguée de Fenchel
+5. Dualité convexe
+6. Algorithmes pour l'optimisation convexe
 
 ## Exercises
 
