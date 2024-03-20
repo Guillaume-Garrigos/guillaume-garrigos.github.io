@@ -7,7 +7,7 @@ layout: default
 
 Cette page contient le matériel du cours "Analyse Convexe" (M1 MIDS) à l'Université de Paris Cité. 
 
-Tout le contenu du cours disponible se trouve [ici](https://cloud.math.univ-paris-diderot.fr/s/fLXPipwgSC9tpzj). Note: le poly du cours n'est pas encore disponible.
+Tout le contenu du cours (feuilles d'exercices et polycopié du cours) se trouve [ici](https://cloud.math.univ-paris-diderot.fr/s/fLXPipwgSC9tpzj). 
 
 ## Course 
 
