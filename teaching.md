@@ -3,6 +3,10 @@ title: Teaching
 layout: default
 ---
 
+I have produced content (lecture notes, exercises) which is available for the following classes: [L3 Calcul Différentiel](/L3calculdiff), [L3 Optimisation](/L3optimisation), [M1 Analyse Convexe](/M1optimization), [M2 Optimization for Machine Learning](/M2optimization).
+
+Below is a detailed list of all my past teaching duties.
+
 {% for teaching in site.data.teaching %}
 {% if teaching.year %}
 
