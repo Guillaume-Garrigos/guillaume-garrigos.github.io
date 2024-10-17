@@ -216,28 +216,12 @@ Place Aurélie Nemours, 75013 Paris, France.}
 		\cvitem{2017}{Organizer of the NORIA group meeting at ENS}
 		\cvitem{2017}{Co-organizer of the Machine Learning summer school RegML 2017, in Oslo \link[\scriptsize{\faGlobe}]{http://lcsl.mit.edu/courses/regml/regml2017/}}
 		\cvitem{2015--2017}{Organizer of the Machine Learning Tutorials, between the LCSL groups at IIT (Genova) and MIT (Boston)}
-\iflongcv{%
-	\subsection{Editorial Activity}
-		\cvitem{}{
-			I am reviewing for various journals: SIAM Journal on Optimization,  SIAM Journal on Imaging Science, Mathematics of Operations Research, Optimization, Mathematical Methods of Operations Research, Journal of Optimization Theory and Applications,  Computational and Applied Mathematics, IEEE Computational Intelligence Magazine.
-		}
-}\fi%
-
-\iflongcv{%
-\section{List of given research talks}
-\vspace*{-1em}
-	\cventrylong{}{}{}{}{}{
-		\begin{small}
-		\begin{itemize}
-			\DTLforeach*{talks}{\date=date, \event=event, \institute=institute, \city=city, \country=country}{
-				\item \date ~ \event.
-				\DTLifnullorempty{\institute}{}{\institute, }\city,
-				\DTLifnullorempty{\country}{France}{\country}.%
-			}	
-		\end{itemize}
-		\end{small}
-	}
-}\fi % talks
+%\iflongcv{%
+%	\subsection{Editorial Activity}
+%		\cvitem{}{
+%			I am reviewing for various journals: SIAM Journal on Optimization,  SIAM Journal on Imaging Science, Mathematics of Operations Research, Optimization, Mathematical Methods of Operations Research, Journal of Optimization Theory and Applications,  Computational and Applied Mathematics, IEEE Computational Intelligence Magazine.
+%		}
+%}\fi%
 
 \iflongcv{%
 \section{List of Science Communication activities}
@@ -249,6 +233,22 @@ Place Aurélie Nemours, 75013 Paris, France.}
 				\item \date ~ \type : \event.
 				%\DTLifnullorempty{\title}{}{\textit{\title.}}
 				\DTLifnullorempty{\location}{}{\location, }\city.%
+			}	
+		\end{itemize}
+		\end{small}
+	}
+}\fi % scicom
+
+\iflongcv{%
+\section{List of given research talks}
+\vspace*{-1em}
+	\cventrylong{}{}{}{}{}{
+		\begin{small}
+		\begin{itemize}
+			\DTLforeach*{talks}{\date=date, \event=event, \institute=institute, \city=city, \country=country}{
+				\item \date ~ \event.
+				\DTLifnullorempty{\institute}{}{\institute, }\city,
+				\DTLifnullorempty{\country}{France}{\country}.%
 			}	
 		\end{itemize}
 		\end{small}
