@@ -1,0 +1,33 @@
+authors:
+  Garrigos:
+    name: G. Garrigos
+    website: https://guillaume-garrigos.com
+  Gower:
+    name: R. M. Gower
+    website: https://gowerrobert.github.io/
+  Loizou:
+    name: N. Loizou
+    website: https://nicolasloizou.github.io/
+  Oikonomou:
+    name: D. Oikonomou
+    website: https://dimitris-oik.github.io/
+  Schaipp:
+    name: F. Schaipp
+    website: https://fabian-sp.github.io/
+
+papers:
+  - date: 2024-04-02
+    title: Analysis of an Idealized Stochastic Polyak Method and its Application to Black-Box Model Distillation
+    authors: 
+      - Gower
+      - Garrigos
+      - Loizou
+      - Oikonomou
+      - Schaipp
+    status:
+    ref : 
+    arxiv: '2504.01898'
+    link-editor:
+    link-slides: 2025-SPS
+
+# todo : run a python script which 1) converts this into a csv 2) creates the name-html value for authors 3) creates the author-list and author-html-list fields for the papers 4) in the reverse order
