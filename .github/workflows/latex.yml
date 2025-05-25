@@ -5,8 +5,10 @@ name: Latex Compiler
 on:
   push:
     paths: # any modifications on those files will trigger the Action
-      - '_data/**.csv'
-      - '_data/**.yml'
+      - '_data/diffusion.csv'
+      - '_data/talks.csv'
+      - '_data/teaching.csv'
+      - '_data/papers.yml'
       - 'curriculum/cv.tex'
       - 'curriculum/cv_long.tex'
       - '.github/workflows/latex.trigger' # this is for debugging, sometimes I jsut wanna trigger without modifying my data
