@@ -11,8 +11,8 @@
 %----------------------------------------------------
 
 \documentclass[11pt,a4paper,sans]{moderncv} % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
-\moderncvstyle{casual} % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
 \moderncvcolor{orange} % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
+\moderncvstyle{casual} % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
 \usepackage[colorlinks,unicode]{hyperref}
 \hypersetup{urlcolor = orange}
 \usepackage[scale=0.75]{geometry}
@@ -69,7 +69,7 @@ leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
 % This is to load data from .csv files in my repertory
 % we use a RAW import to avoid conflict with special characters like # and &
 \usepackage{datatool}
-\DTLloadrawdb[]{papers}{../_data/papers.csv}
+\DTLloadrawdb[]{papers}{../_data/compiled/papers.csv}
 \DTLloadrawdb[]{talks}{../_data/talks.csv}
 \DTLloadrawdb[]{teaching}{../_data/teaching.csv}
 \DTLloadrawdb[]{diffusion}{../_data/diffusion.csv}
@@ -96,7 +96,7 @@ Place Aurélie Nemours, 75013 Paris, France.}
 	\cvitem{position}{\textbf{Maître de conférences} at Université Paris Cité}
 	\cvitem{affiliation}{Laboratoire de Probabilités, Statistique et Modélisation}
 	\cvitem{research interests}{
-		optimization, statistical machine learning, inverse problems, image and signal processing, algorithms and continuous dynamical systems, tame optimization.
+		Optimization: algorithms and continuous dynamical systems, deterministic and stochastic methods, convex and tame problems. Inverse problems: statistical machine learning, image and signal processing.
 	}
 
 \section{Previous positions (2012--2018)}
