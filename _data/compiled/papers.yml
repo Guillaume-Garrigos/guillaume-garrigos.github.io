@@ -119,7 +119,7 @@ papers:
   status: null
   title: Analysis of an Idealized Stochastic Polyak Method and its Application to
     Black-Box Model Distillation
-- arxiv: 2402.14578
+- arxiv: '2402.14578'
   author-list:
   - Hihat
   - Garrigos
@@ -136,7 +136,7 @@ papers:
   ref: null
   status: preprint
   title: Multivariate Online Linear Regression for Hierarchical Forecasting
-- arxiv: 2402.12828
+- arxiv: '2402.12828'
   author-list:
   - Garrigos
   - Gower
@@ -168,7 +168,7 @@ papers:
   status: null
   title: 'Function Value Learning: Adaptive Learning Rates Based on the Polyak Stepsize
     and Function Splitting in ERM'
-- arxiv: 2307.06048
+- arxiv: '2307.06048'
   author-list:
   - Hihat
   - Gaïffas
@@ -186,7 +186,7 @@ papers:
   status: accepted-conf
   title: 'Online Inventory Problems: Beyond the i.i.d. Setting with Online Convex
     Optimization'
-- arxiv: 2306.03638
+- arxiv: '2306.03638'
   author-list:
   - Domke
   - Garrigos
@@ -201,7 +201,7 @@ papers:
   ref: Advances in Neural Information Processing Systems, Vol. 36, 2024.
   status: accepted-conf
   title: Provable convergence guarantees for black-box variational inference
-- arxiv: 2301.11235
+- arxiv: '2301.11235'
   author-list:
   - Garrigos
   - Gower
@@ -214,7 +214,7 @@ papers:
   ref: null
   status: preprint
   title: Handbook of Convergence Theorems for (Stochastic) Gradient Methods
-- arxiv: 2301.10332
+- arxiv: '2301.10332'
   author-list:
   - Garrigos
   authors: G. Garrigos
@@ -225,7 +225,7 @@ papers:
   ref: null
   status: preprint
   title: Square distance functions are Polyak-Łojasiewicz and vice-versa
-- arxiv: 2106.1052
+- arxiv: '2106.10520'
   author-list:
   - Jiabin
   - Rui
@@ -242,7 +242,7 @@ papers:
     PMLR, Vol. 151, pp. 279--318, 2022.
   status: accepted-conf
   title: 'SAN: Stochastic Average Newton Algorithm for Minimizing Finite Sums'
-- arxiv: 1912.12153
+- arxiv: '1912.12153'
   author-list:
   - Garrigos
   - Rosasco
@@ -257,7 +257,7 @@ papers:
   ref: SIAM Journal on Optimization, Vol. 31, No. 1, pp. 754--784, 2021.
   status: accepted-journal
   title: Accelerated iterative regularization via dual diagonal descent
-- arxiv: 1803.00783
+- arxiv: '1803.00783'
   author-list:
   - Garrigos
   - Rosasco
@@ -273,7 +273,7 @@ papers:
     2018.
   status: accepted-conf
   title: 'Sparse Multiple Kernel Learning: Support Identification via Mirror Stratifiability'
-- arxiv: 1803.08381
+- arxiv: '1803.08381'
   author-list:
   - Fadili
   - Garrigos
@@ -290,7 +290,7 @@ papers:
     PMLR, Vol. 89, pp. 1236--1244, 2019.
   status: accepted-conf
   title: Model Consistency for Learning with Mirror-Stratifiable Regularizers
-- arxiv: 1712.00357
+- arxiv: '1712.00357'
   author-list:
   - Garrigos
   - Rosasco
@@ -306,7 +306,7 @@ papers:
   status: accepted-journal
   title: 'Thresholding gradient methods in Hilbert spaces: support identification
     and linear convergence'
-- arxiv: 1610.0217
+- arxiv: '1610.02170'
   author-list:
   - Garrigos
   - Rosasco
@@ -321,7 +321,7 @@ papers:
   ref: Journal of Mathematical Imaging and Vision, Vol. 60, No. 2, pp. 189--215, 2018.
   status: accepted-journal
   title: Iterative regularization via dual diagonal descent
-- arxiv: 1703.09477
+- arxiv: '1703.09477'
   author-list:
   - Garrigos
   - Rosasco
@@ -337,7 +337,7 @@ papers:
   status: accepted-journal
   title: 'Convergence of the Forward-Backward algorithm: beyond the worst case with
     geometry'
-- arxiv: 1610.0217
+- arxiv: '1610.02170'
   author-list:
   - Garrigos
   - Rosasco
@@ -352,7 +352,7 @@ papers:
   ref: 9th NIPS Workshop on Optimization for Machine Learning, 2016.
   status: accepted-conf
   title: Iterative regularization via a dual diagonal descent method
-- arxiv: 1506.02823
+- arxiv: '1506.02823'
   author-list:
   - Attouch
   - Garrigos
@@ -365,7 +365,7 @@ papers:
   ref: null
   status: preprint
   title: 'Multiobjective optimization : an inertial dynamical approach to Pareto optima'
-- arxiv: 1406.1694
+- arxiv: '1406.1694'
   author-list:
   - Attouch
   - Garrigos
@@ -383,7 +383,7 @@ papers:
   status: accepted-journal
   title: A dynamic gradient approach to Pareto optimization with nonsmooth convex
     objective functions
-- arxiv: 1405.1357
+- arxiv: '1405.1357'
   author-list:
   - Frankel
   - Garrigos
