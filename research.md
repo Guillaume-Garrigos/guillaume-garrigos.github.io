@@ -8,7 +8,7 @@ layout: default
 
 ---
 
-{% for paper in site.data.papers %}
+{% for paper in site.data.compiled.papers %}
 {{ paper.authors-html }} <br>
 **{{ paper.title }}** <br>
 {%- if paper.status == "accepted-journal" or paper.status == "accepted-conf" -%}
