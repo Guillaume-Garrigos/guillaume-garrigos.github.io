@@ -1,0 +1,314 @@
+authors:
+  Attouch:
+    name: H. Attouch
+    website: https://scholar.google.com/scholar?q=author%3A%22hedy+attouch%22
+  Bussy: 
+    name: S. Bussy
+    website: https://simonbussy.com/
+  Cortild:
+    name: D. Cortild
+    website: https://daniel.cortild.com/
+  Domke:
+    name: J. Domke
+    website: https://people.cs.umass.edu/~domke/
+  Fadili:
+    name: J. Fadili
+    website: https://fadili.users.greyc.fr/
+  Fermanian:
+    name: A. Fermanian
+    website: https://afermanian.github.io/
+  Frankel:
+    name: P. Frankel
+    website: https://scholar.google.com/scholar?q=author%3A%22Pierre+Frankel%22
+  Gaïffas:
+    name: S. Gaïffas
+    website: https://stephanegaiffas.github.io/
+  Garrigos:
+    name: G. Garrigos
+    website: https://guillaume-garrigos.com
+  Goudou:
+    name: X. Goudou
+    website: https://scholar.google.com/scholar?q=author%3A%22xavier+goudou%22
+  Gower:
+    name: R. M. Gower
+    website: https://gowerrobert.github.io/
+  Hihat:
+    name: M. Hihat
+    website: https://scholar.google.com/citations?user=LsBvn28AAAAJ&hl=fr
+  Jiabin:
+    name: J. Chen
+    website: https://www.linkedin.com/in/jiabin-chen-a54039150
+  Ketels:
+    name: L. Ketels
+    website: null
+  Loizou:
+    name: N. Loizou
+    website: https://nicolasloizou.github.io/
+  Malick:
+    name: J. Malick
+    website: https://ljk.imag.fr/membres/Jerome.Malick/
+  Oikonomou:
+    name: D. Oikonomou
+    website: https://dimitris-oik.github.io/
+  Peypouquet:
+    name: J. Peypouquet
+    website: https://sites.google.com/rug.nl/peypouquet
+  Peyré:
+    name: G. Peyré
+    website: http://www.gpeyre.com/
+  Rosasco:
+    name: L. Rosasco
+    website: http://web.mit.edu/lrosasco/www/
+  Rui:
+    name: R. Yuan
+    website: https://github.com/Rui-Yuan91
+  Schaipp:
+    name: F. Schaipp
+    website: https://fabian-sp.github.io/
+  Simsekli:
+    name: U. Simeskli
+    website: https://www.di.ens.fr/umut.simsekli/
+  Villa:
+    name: S. Villa
+    website: http://lcsl.mit.edu/data/silviavilla/Home.html
+
+papers:
+  - 
+    date: 2024-04-02
+    title: Analysis of an Idealized Stochastic Polyak Method and its Application to Black-Box Model Distillation
+    author-list: 
+      - Gower
+      - Garrigos
+      - Loizou
+      - Oikonomou
+      - Schaipp
+    status:
+    ref : 
+    arxiv: '2504.01898'
+    link-editor:
+    link-slides: 2025-SPS
+
+  - 
+    date: 2024-02-22
+    title: Multivariate Online Linear Regression for Hierarchical Forecasting
+    author-list:
+      - Hihat
+      - Garrigos
+      - Fermanian
+      - Bussy
+    status: preprint
+    ref: 
+    arxiv: '2402.14578'
+    link-editor: 
+    link-slides: 
+  
+  -
+    date: 2024-02-20
+    title: SGD with Clipping is Secretly Estimating the Median Gradient
+    author-list:
+      - Garrigos
+      - Gower
+      - Simsekli
+      - Schaipp
+    status: preprint
+    ref: 
+    arxiv: '2402.12828'
+    link-editor: 
+    link-slides: 
+
+  - date: 2023-07-26
+    title: 'Function Value Learning: Adaptive Learning Rates Based on the Polyak Stepsize and Function Splitting in ERM'
+    author-list: 
+      - Garrigos
+      - Gower
+      - Schaipp
+    status:
+    ref : 
+    arxiv: '2307.14528'
+    link-editor:
+    link-slides: 
+
+  - 
+    date: 2023-07-12
+    title: "Online Inventory Problems: Beyond the i.i.d. Setting with Online Convex Optimization"
+    author-list:
+      - Hihat
+      - Gaïffas
+      - Garrigos
+      - Bussy
+    status: accepted-conf
+    ref: Advances in Neural Information Processing Systems, Vol. 36, 2024.
+    arxiv: '2307.06048'
+    link-editor: https://proceedings.neurips.cc/paper_files/paper/2023/hash/41128e5b3a7622da5b17588757599077-Abstract-Conference.html
+    link-slides: 
+
+  -
+    date: 2023-06-04
+    title: Provable convergence guarantees for black-box variational inference
+    author-list:
+      - Domke
+      - Garrigos
+      - Gower
+    status: accepted-conf
+    ref: Advances in Neural Information Processing Systems, Vol. 36, 2024.
+    arxiv: '2306.03638'
+    link-editor: https://proceedings.neurips.cc/paper_files/paper/2023/hash/d0bcff6425bbf850ec87d5327a965db9-Abstract-Conference.html
+    link-slides: 2023-VI
+
+  - 
+    date: 2023-01-26
+    title: Handbook of Convergence Theorems for (Stochastic) Gradient Methods
+    author-list: 
+      - Garrigos 
+      - Gower
+    status: preprint
+    ref: 
+    arxiv: '2301.11235'
+    link-editor: 
+    link-slides: 
+
+  -
+    date: 2023-01-24
+    title: Square distance functions are Polyak-Łojasiewicz and vice-versa
+    author-list: 
+      - Garrigos
+    status: preprint
+    ref: 
+    arxiv: '2301.10332'
+    link-editor: 
+    link-slides: 
+
+  - 
+    date: 2021-06-19
+    title: "SAN: Stochastic Average Newton Algorithm for Minimizing Finite Sums"
+    author-list:
+      - Jiabin
+      - Rui
+      - Garrigos
+      - Gower
+    status: accepted-conf
+    ref: 25th International Conference on Artificial Intelligence and Statistics (AISTATS), PMLR, Vol. 151, pp. 279--318, 2022.
+    arxiv: '2106.10520'
+    link-editor: https://proceedings.mlr.press/v151/chen22a.html
+    link-slides: 
+  
+  -
+    date: 2019-12-27
+    title: Accelerated iterative regularization via dual diagonal descent
+    author-list:
+      - Garrigos
+      - Rosasco
+      - Villa
+    status: accepted-journal
+    ref: SIAM Journal on Optimization, Vol. 31, No. 1, pp. 754--784, 2021.
+    arxiv: '1912.12153'
+    link-editor: https://doi.org/10.1137/19M1308888
+    link-slides: 
+  -
+    date: 2018-12-24
+    title: "Sparse Multiple Kernel Learning: Support Identification via Mirror Stratifiability"
+    author-list:
+      - Garrigos
+      - Rosasco
+      - Villa
+    status: accepted-conf
+    ref: IEEE 26th European Signal Processing Conference (EUSIPCO), pp. 1077--1081, 2018.
+    arxiv: '1803.00783'
+    link-editor: https://doi.org/10.23919/EUSIPCO.2018.8553267
+    link-slides: 
+  -
+    date: 2018-03-22
+    title: Model Consistency for Learning with Mirror-Stratifiable Regularizers
+    author-list:
+      - Fadili
+      - Garrigos
+      - Malick
+      - Peyré
+    status: accepted-conf
+    ref: 22nd International Conference on Artificial Intelligence and Statistics (AISTATS), PMLR, Vol. 89, pp. 1236--1244, 2019.
+    arxiv: '1803.08381'
+    link-editor: http://proceedings.mlr.press/v89/fadili19a.html
+    link-slides: 
+  -
+    date: 2017-12-01
+    title: "Thresholding gradient methods in Hilbert spaces: support identification and linear convergence"
+    author-list:
+      - Garrigos
+      - Rosasco
+      - Villa
+    status: accepted-journal
+    ref: "ESAIM: Control, Optimisation and Calculus of Variations, Vol. 26 (28), 2020."
+    arxiv: '1712.00357'
+    link-editor: https://doi.org/10.1051/cocv/2019011
+    link-slides: 
+  -
+    date: 2017-07-17
+    title: Iterative regularization via dual diagonal descent
+    author-list:
+      - Garrigos
+      - Rosasco
+      - Villa
+    status: accepted-journal
+    ref: Journal of Mathematical Imaging and Vision, Vol. 60, No. 2, pp. 189--215, 2018.
+    arxiv: '1610.02170'
+    link-editor: https://doi.org/10.1007/s10851-017-0754-0
+    link-slides: 3D
+  -
+    date: 2017-03-28
+    title: "Convergence of the Forward-Backward algorithm: beyond the worst case with geometry"
+    author-list:
+      - Garrigos
+      - Rosasco
+      - Villa
+    status: accepted-journal
+    ref: Mathematical Programming, Vol. 198, pp. 937--996, 2023
+    arxiv: '1703.09477'
+    link-editor: https://doi.org/10.1007/s10107-022-01809-4
+    link-slides: 2017-beyond
+  -
+    date: 2016-12-01
+    title: Iterative regularization via a dual diagonal descent method
+    author-list:
+      - Garrigos
+      - Rosasco
+      - Villa
+    status: accepted-conf
+    ref: 9th NIPS Workshop on Optimization for Machine Learning, 2016.
+    arxiv: '1610.02170'
+    link-editor: http://opt-ml.org/papers/OPT2016_paper_19.pdf
+    link-slides: 
+  -
+    date: 2015-06-09
+    title: "Multiobjective optimization : an inertial dynamical approach to Pareto optima"
+    author-list:
+      - Attouch
+      - Garrigos
+    status: preprint
+    ref: 
+    arxiv: '1506.02823'
+    link-editor: 
+    link-slides: 2016-Pareto-inertial
+  -
+    date: 2014-09-10
+    title: A dynamic gradient approach to Pareto optimization with nonsmooth convex objective functions
+    author-list:
+      - Attouch
+      - Garrigos
+      - Goudou
+    status: accepted-journal
+    ref: Journal of Mathematical Analysis and Applications, Vol. 422, No. 1, pp. 741--771, 2015.
+    arxiv: '1406.1694'
+    link-editor: https://doi.org/10.1016/j.jmaa.2014.09.001
+    link-slides: 2014-Pareto
+  -
+    date: 2014-08-12
+    title: Splitting methods with variable metric for KL functions and general convergence rates
+    author-list:
+      - Frankel
+      - Garrigos
+      - Peypouquet
+    status: accepted-journal
+    ref: Journal of Optimization Theory and Applications, Vol. 165, No. 3, pp. 874--900, 2015.
+    arxiv: '1405.1357'
+    link-editor: https://doi.org/10.1007/s10957-014-0642-3
+    link-slides: 2014-Lojasiewicz-AFB
