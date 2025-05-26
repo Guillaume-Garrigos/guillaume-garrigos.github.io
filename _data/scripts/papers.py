@@ -59,7 +59,7 @@ for paper in papers:
 # Écrire le dictionnaire Python dans un fichier YAML
 output_folder = os.path.join(working_folder, "compiled")
 
-with open(os.path.join(output_folder, "papers.yml"), "w", encoding="utf8") as file:
+with open(os.path.join(output_folder, "papers.yml"), "w+", encoding="utf8") as file:
     yaml.dump(file_yml, file, allow_unicode=True)
 
 # now we have a compiled yml file. It remains to convert it to csv because i don't know how to parse yaml in latex
