@@ -11,6 +11,7 @@ import csv
 
 working_folder = "_data"
 output_folder = os.path.join(working_folder, "compiled")
+os.makedirs(output_folder, exist_ok=True)
 
 # Ouvrir le fichier YAML en mode lecture
 with open(os.path.join(working_folder, "papers.yml"), "r", encoding="utf8") as file:
