@@ -114,7 +114,7 @@ papers:
   link-editor: null
   link-slides: null
   ref: null
-  status: null
+  status: preprint
   title: 'New Tight Bounds for SGD without Variance Assumption: A Computer-Aided Lyapunov
     Analysis'
 - arxiv: '2504.01898'
@@ -133,7 +133,7 @@ papers:
   link-editor: null
   link-slides: 2025-SPS
   ref: null
-  status: null
+  status: preprint
   title: Analysis of an Idealized Stochastic Polyak Method and its Application to
     Black-Box Model Distillation
 - arxiv: '2402.14578'
@@ -182,7 +182,7 @@ papers:
   link-editor: null
   link-slides: null
   ref: null
-  status: null
+  status: preprint
   title: 'Function Value Learning: Adaptive Learning Rates Based on the Polyak Stepsize
     and Function Splitting in ERM'
 - arxiv: '2307.06048'
