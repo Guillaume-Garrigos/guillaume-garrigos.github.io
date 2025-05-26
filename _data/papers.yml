@@ -74,7 +74,20 @@ authors:
 
 papers:
   - 
-    date: 2024-04-02
+    date: 2025-05-23
+    title: "New Tight Bounds for SGD without Variance Assumption: A Computer-Aided Lyapunov Analysis"
+    author-list: 
+      - Cortild
+      - Ketels
+      - Peypouquet
+      - Garrigos
+    status:
+    ref : 
+    arxiv: '2505.17965'
+    link-editor:
+    link-slides: 
+  - 
+    date: 2025-04-02
     title: Analysis of an Idealized Stochastic Polyak Method and its Application to Black-Box Model Distillation
     author-list: 
       - Gower
