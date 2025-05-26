@@ -59,8 +59,9 @@ for paper in papers:
 
 # write the papers data into a csv because i don't know how to parse yaml in latex
 # first we want to make sure to no save the 'author-list' which is not well suited for csv (because its a list)
-keys = papers[0].keys()
-keys.remove('author-list')
+# well it doesn't seem to be such a problem we should not care?
+keys = list(papers[0]) # beware dict.keys() is not a list https://stackoverflow.com/a/44570755
+#keys.remove('author-list')
 
 # create the csv
 # https://stackoverflow.com/a/3087011
