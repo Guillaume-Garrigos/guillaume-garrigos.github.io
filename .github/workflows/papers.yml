@@ -46,7 +46,7 @@ jobs:
     - name: Set up Git repository
       uses: actions/checkout@master
       with:
-        ref: master
+        ref: master # this imposes to pull from the very LAST commit which was done by python just before https://github.com/actions/checkout/issues/439#issuecomment-965968956
     - name: Compile Latex Document
       uses: Guillaume-Garrigos/latex-action@master
       with:
