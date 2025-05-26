@@ -10,6 +10,7 @@ import csv
 # https://blog.stephane-robert.info/docs/developper/programmation/python/yaml/
 
 working_folder = "_data"
+output_folder = os.path.join(working_folder, "compiled")
 
 # Ouvrir le fichier YAML en mode lecture
 with open(os.path.join(working_folder, "papers.yml"), "r", encoding="utf8") as file:
@@ -56,25 +57,19 @@ for paper in papers:
     paper['authors'] = list_to_readable([authors[author_name]['name'] for author_name in author_names])
     paper['authors-html'] = list_to_readable([authors[author_name]['name-html'] for author_name in author_names])
 
+# write the papers data into a csv because i don't know how to parse yaml in latex
+# first we want to make sure to no save the 'author-list' which is not well suited for csv (because its a list)
+keys = papers[0].keys()
+keys.remove('author-list')
+
+# create the csv
+# https://stackoverflow.com/a/3087011
+with open(os.path.join(output_folder, "papers.csv"), 'w', newline='', encoding="utf8") as output_file:
+    dict_writer = csv.DictWriter(output_file, keys)
+    dict_writer.writeheader()
+    dict_writer.writerows(papers)
+
 # Écrire le dictionnaire Python dans un fichier YAML
-output_folder = os.path.join(working_folder, "compiled")
-
-with open(os.path.join(output_folder, "papers.yml"), "w+", encoding="utf8") as file:
+with open(os.path.join(output_folder, "papers.yml"), "w", encoding="utf8") as file:
     yaml.dump(file_yml, file, allow_unicode=True)
-
-# now we have a compiled yml file. It remains to convert it to csv because i don't know how to parse yaml in latex
-
-# Ouvrir le fichier YAML en mode lecture
-with open(os.path.join(output_folder, "papers.yml"), "r", encoding="utf8") as file:
-    papers = yaml.safe_load(file)['papers']
-    for paper in papers: # remove the list of authors, not suitable for csv
-        paper.pop('author-list')
-
-    # create the csv
-    # https://stackoverflow.com/a/3087011
-    keys = papers[0].keys()
-    with open(os.path.join(output_folder, "papers.csv"), 'w', newline='', encoding="utf8") as output_file:
-        dict_writer = csv.DictWriter(output_file, keys)
-        dict_writer.writeheader()
-        dict_writer.writerows(papers)
 
