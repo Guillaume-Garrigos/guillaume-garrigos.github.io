@@ -1,6 +1,8 @@
 # This workflow automatically compiles cv.tex in the folder curriculum/ and creates cv.pdf
 # Actually also compiles a second cv_long version of the curriculum
 # This Github Action is triggered by modifications to the data in the _data/ folder.
+#   except for papers.yml which is handled by its own action
+
 name: Latex Compiler
 on:
   push:
@@ -8,7 +10,6 @@ on:
       - '_data/diffusion.csv'
       - '_data/talks.csv'
       - '_data/teaching.csv'
-      - '_data/papers.yml'
       - 'curriculum/cv.tex'
       - 'curriculum/cv_long.tex'
       - '.github/workflows/latex.trigger' # this is for debugging, sometimes I jsut wanna trigger without modifying my data
