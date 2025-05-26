@@ -81,7 +81,7 @@ papers:
       - Ketels
       - Peypouquet
       - Garrigos
-    status:
+    status: preprint
     ref : 
     arxiv: '2505.17965'
     link-editor:
@@ -95,7 +95,7 @@ papers:
       - Loizou
       - Oikonomou
       - Schaipp
-    status:
+    status: preprint
     ref : 
     arxiv: '2504.01898'
     link-editor:
@@ -135,7 +135,7 @@ papers:
       - Garrigos
       - Gower
       - Schaipp
-    status:
+    status: preprint
     ref : 
     arxiv: '2307.14528'
     link-editor:
