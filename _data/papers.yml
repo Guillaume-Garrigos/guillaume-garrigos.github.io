@@ -85,7 +85,7 @@ papers:
     ref : 
     arxiv: '2505.17965'
     link-editor:
-    link-slides: 
+    link-slides: 2025-SGD-PEP
   - 
     date: 2025-04-02
     title: Analysis of an Idealized Stochastic Polyak Method and its Application to Black-Box Model Distillation
