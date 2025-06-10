@@ -112,7 +112,7 @@ papers:
     href=' https://guillaume-garrigos.com '>G. Garrigos</a>
   date: 2025-05-23
   link-editor: null
-  link-slides: null
+  link-slides: 2025-SGD-PEP
   ref: null
   status: preprint
   title: 'New Tight Bounds for SGD without Variance Assumption: A Computer-Aided Lyapunov
