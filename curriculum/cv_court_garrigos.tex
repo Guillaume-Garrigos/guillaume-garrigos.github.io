@@ -1,0 +1,270 @@
+%% This document is based on a template:
+%% Copyright 2006-2015 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+%----------------------------------------------------
+%            GLOBAL OPTIONS
+%----------------------------------------------------
+
+\documentclass[11pt,a4paper,sans]{moderncv} % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+\moderncvstyle{casual} % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
+\moderncvcolor{orange} % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
+\usepackage[colorlinks,unicode]{hyperref}
+\hypersetup{urlcolor = orange}
+\usepackage[scale=0.75]{geometry}
+
+
+\newif\iflongcv
+\ifdefined\ActivateLONGCV % Must be passed as an option of latexmk see https://tex.stackexchange.com/questions/64245/latexmk-using-jobname-and-a-command-line-def
+	\longcvtrue
+\else
+	\longcvfalse
+\fi
+
+%----------------------------------------------------------------------------------
+%            CUSTOM FUNCTIONS & ENVIRONMENTS
+%----------------------------------------------------------------------------------
+
+% customize the enumerate environments
+\usepackage{enumitem}
+\setlist{nolistsep}
+
+% A custom version of the \cventry command that supports large itemized lists
+\newcommand*{\cventrylong}[7][.25em]{%
+  \begin{tabular}{@{}p{\hintscolumnwidth}@{\hspace{\separatorcolumnwidth}}p{\maincolumnwidth}@{}}%
+    \raggedleft\hintstyle{#2} &{%
+        {\bfseries#3}%
+        \ifthenelse{\equal{#4}{}}{}{, {\slshape#4}}%
+        \ifthenelse{\equal{#5}{}}{}{, #5}%
+        \ifthenelse{\equal{#6}{}}{}{, #6}%
+    }%
+  \end{tabular}%
+  {\small#7}%
+  \par\addvspace{#1}}
+
+% A custom version of the itemize environment that sets the appropriate left
+% margin for use inside \cventylong
+\newlist{cvitemize}{itemize}{1}
+\setlist[cvitemize]{label=\labelitemi,%
+leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
+
+\usepackage[misc]{ifsym} % Special character for documents
+
+%----------------------------------------------------
+%            HEADER INFORMATION
+%----------------------------------------------------
+
+\name{Guillaume}{Garrigos}
+\title{Curriculum Vitae}
+\photo[96pt][0.1pt]{picture} % [#1] is the height the picture must be resized to, [#2] is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+
+%----------------------------------------------------
+%            DATA TO BE IMPORTED
+%----------------------------------------------------
+
+% This is to load data from .csv files in my repertory
+% we use a RAW import to avoid conflict with special characters like # and &
+\usepackage{datatool}
+\DTLloadrawdb[]{papers}{../_data/papers.csv}
+\DTLloadrawdb[]{talks}{../_data/talks.csv}
+\DTLloadrawdb[]{teaching}{../_data/teaching.csv}
+\DTLloadrawdb[]{diffusion}{../_data/diffusion.csv}
+
+%----------------------------------------------------
+%            DOCUMENT
+%----------------------------------------------------
+
+\begin{document}
+
+\vspace*{-5em}
+
+\makecvtitle
+\pagestyle{empty}
+
+\vspace*{-3em}
+
+\section{Personal information and contact}
+	\cvitem{\faUser}{Born in Toulouse (France), May 8th 1989.}
+	\cvitem{\faEnvelope}{Université Paris Cité,
+Place Aurélie Nemours, 75013 Paris, France.}
+	\cvitem{\faAt}{guillaume.garrigos@lpsm.paris}
+	\cvitem{\faGlobe}{\link[http://guillaume-garrigos.com]{http://guillaume-garrigos.com}}
+
+\section{Current position (2018--~)}
+	\cvitem{position}{\textbf{Maître de conférences} at Université Paris Cité}
+	\cvitem{affiliation}{Laboratoire de Probabilités, Statistique et Modélisation}
+	\cvitem{research interests}{
+		optimization, statistical machine learning, inverse problems, image and signal processing, algorithms and continuous dynamical systems, tame optimization.
+	}
+
+\section{Previous positions (2012--2018)}
+	\cventry{2017--2018}{Post-doc}{\'Ecole Normale Supérieure}{Paris, France}{}{
+%		Lab: Département de Mathématiques et Applications
+%		\newline{}%
+		Main collaborator : Gabriel Peyr\'e (ENS, CNRS, INRIA)\newline{}%
+		Research themes : inverse problems, signal and image processing, optimization
+	}
+	\cventry{2015--2017}{Post-doc}{Istituto Italiano di Tecnologia}{Genoa, Italy}{}{
+%		Lab: Laboratory for Computational and Statistical Learning
+%		\newline{}%
+		Main collaborators : Lorenzo Rosasco (IIT, MIT) and Silvia Villa (IIT)
+		\newline{}%
+		Research themes : optimization and regularization methods for machine learning.
+	}
+	\cventry{2012--2015}{Ph.D.}{Université de Montpellier \& Universidad Santa Maria}{France \& Chile}{}{
+		Supervisors : Hédy Attouch (UM) and Juan Peypouquet (USM)
+		\newline{}%
+		Subject : Dynamical systems for tame optimization and multi-objective problems \link[\scriptsize{\PaperPortrait}]{https://tel.archives-ouvertes.fr/tel-01245406}
+	}
+	
+	
+
+%\section{Ph.D. thesis (2012--2015)}
+%	\cvitem{title}{\emph{Descent dynamical systems and algorithms for tame optimization and multi-objective problems} \link[\scriptsize{\PaperPortrait}]{https://tel.archives-ouvertes.fr/tel-01245406}}
+%	\cvitem{university}{Université de Montpellier (France) and Universidad Santa Maria (Valparaíso, Chile)}
+%	\cvitem{supervisors}{Hédy Attouch (UM) and Juan Peypouquet (USM)}
+%	\cvitem{committee}{Hédy Attouch, Aris Daniilidis, Jalal Fadili, Pedro Gajardo, Adrian Lewis, Juan Peypouquet, Lionel Thibault}
+
+%\section{Education and Degrees}
+%	\cventry{2013}{Agrégation de Mathématiques}{}{ranked 147/323}{}{}
+%	\cventry{2010--2012}{Master}{Université de Montpellier}{}{Mathématiques, Statistiques et Applications}{}  % arguments 3 to 6 can be left empty
+%	\cventry{2007--2010}{Licence}{Université de Montpellier}{Mathématiques Fondamentales et Appliquées}{}{}
+%	\cventry{2007}{Baccalauréat}{Lycée Diderot}{Narbonne}{}{}
+
+
+%\section{Miscellaneous}
+%%	\cvitem{2021}{Idex grant for a pedagogical project funded by Université Paris Cité, 20k EUR.}
+%	\cvitem{2019}{PEPS grant funded by INSMI (CNRS), 3,5k EUR.}
+%	\cvitem{2017}{SMAI-MODE Dodu Prize for the best young researcher talk: \textit{Structured sparsity in inverse problems and support recovery with mirror-stratifiable functions}.}
+
+
+%\iflongcv{%
+\section{List of Science Communication activities}
+\vspace*{-1em}
+	\cventrylong{}{}{}{}{}{
+		\begin{small}
+		\begin{itemize}
+			\DTLforeach*{diffusion}{\date=date, \type=type, \event=event, \title=title, \location=location, \city=city}{
+				\item \date ~ \type : \event.
+				%\DTLifnullorempty{\title}{}{\textit{\title.}}
+				\DTLifnullorempty{\location}{}{\location, }\city.%
+			}	
+		\end{itemize}
+		\end{small}
+	}
+%}\fi % scicom
+	
+	\newpage
+
+\section{Responsibilities}
+	\subsection{Student supervision}
+		\cvitem{2025-2028}{Théo Moret. Undergrad + PhD thesis.}
+		\cvitem{2023-2027}{Lucas Ketels. Undergrad + PhD thesis.}
+		\cvitem{2023}{Julien Marie-Anne. Undergrad project.}
+		\cvitem{2021-2024}{Massil Hihat. PhD thesis.}
+	
+	\subsection{Seminars, Events}
+		\cvitem{2019}{Co-organizer of the workshop "\textit{Regularisation for Inverse Problems and Machine Learning}", in Paris \link[\scriptsize{\faGlobe}]{https://invprob-ml-workshop.github.io/}}
+		\cvitem{2018}{Co-organizer of  the session "\textit{Dimensionality reduction tools for learning: A sketchy session}" for the International Symposium on Mathematical Programming (ISMP)}
+		\cvitem{2017}{Organizer of the NORIA group meeting at ENS}
+		\cvitem{2017}{Co-organizer of the Machine Learning summer school RegML 2017, in Oslo \link[\scriptsize{\faGlobe}]{http://lcsl.mit.edu/courses/regml/regml2017/}}
+		\cvitem{2015--2017}{Organizer of the Machine Learning Tutorials, IIT (Genova) and MIT (Boston)}
+%\iflongcv{%
+%	\subsection{Editorial Activity}
+%		\cvitem{}{
+%			I am reviewing for various journals: SIAM Journal on Optimization,  SIAM Journal on Imaging Science, Mathematics of Operations Research, Optimization, Mathematical Methods of Operations Research, Journal of Optimization Theory and Applications,  Computational and Applied Mathematics, IEEE Computational Intelligence Magazine.
+%		}
+%}\fi%
+
+%
+%
+\section{Selected publications} % Here we use the data from papers.csv
+%	\cventrylong{}{{Publications in international specialized journals}}{}{}{}{%
+%		\begin{itemize}
+%			\DTLforeach*[\DTLiseq{\status}{accepted-journal}]{papers}{\status=status, \title=title, \authors=authors, \ref=ref,\arxiv=arxiv}{
+%				\item \authors. \textit{\title}, \ref \ 
+%				\link[\scriptsize{\PaperPortrait}]{https://arxiv.org/abs/\arxiv}
+%			}
+%		\end{itemize}
+%	}
+
+	\cventrylong{}{{}}{}{}{}{
+		\begin{itemize}
+			\DTLforeach*[\DTLiseq{\status}{accepted-conf}]{papers}{\status=status, \title=title, \authors=authors, \ref=ref,\arxiv=arxiv}{
+				\item \authors. \textit{\title}, \ref \ 
+				\link[\scriptsize{\PaperPortrait}]{https://arxiv.org/abs/\arxiv}%
+			}
+		\end{itemize}
+	}
+%	\cventrylong{}{{Preprints}}{}{}{}{
+%		\begin{itemize}
+%			\DTLforeach*[\DTLiseq{\status}{preprint}]{papers}{\status=status, \title=title, \authors=authors, \arxiv=arxiv}{
+%				\item \authors. \textit{\title}. Preprint on arXiv:\arxiv.
+%				\link[\scriptsize{\PaperPortrait}]{https://arxiv.org/abs/\arxiv}
+%			}
+%		\end{itemize}
+%	}
+	
+	
+	
+%	
+%	
+%\newpage
+
+
+
+
+
+
+
+
+
+
+\iflongcv{%	
+\section{Teaching} % Here we use data from teaching.csv
+\vspace*{-1em}
+	\cventrylong{}{}{}{}{}{%
+		\begin{small}
+			\DTLforeach*{teaching}{\year=year, \class=class, \type=type, \level=level, \hours=hours, \comment=comment, \URL=url, \comment=comment}{%
+				\cvitem{\year}{%
+				\class, \type, \level, \hours h%
+				\DTLifnullorempty{\comment}{}{ (\comment)}
+				\DTLifnullorempty{\URL}{}{\ \link[\scriptsize{\faGlobe}]{\URL}}
+				}%
+%				\item \date ~ \event.
+%				\DTLifnullorempty{\institute}{}{\institute, }\city,
+%				\DTLifnullorempty{\country}{France}{\country}.%
+			}%
+		\end{small}
+	}	
+}\fi % teaching
+	
+	
+
+
+
+\iflongcv{%
+\section{List of given research talks}
+\vspace*{-1em}
+	\cventrylong{}{}{}{}{}{
+		\begin{small}
+		\begin{itemize}
+			\DTLforeach*{talks}{\date=date, \event=event, \institute=institute, \city=city, \country=country}{
+				\item \date ~ \event.
+				\DTLifnullorempty{\institute}{}{\institute, }\city,
+				\DTLifnullorempty{\country}{France}{\country}.%
+			}	
+		\end{itemize}
+		\end{small}
+	}
+}\fi % talks
+
+\end{document}
+
+%----------------------------------------------------
+%            END
+%----------------------------------------------------
