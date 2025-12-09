@@ -173,17 +173,17 @@ papers:
   author-list:
   - Schaipp
   - Garrigos
-  - Gower
   - Simsekli
-  authors: F. Schaipp, G. Garrigos, R. M. Gower and U. Simeskli
+  - Gower
+  authors: F. Schaipp, G. Garrigos, U. Simeskli and R. M. Gower
   authors-html: <a href=' https://fabian-sp.github.io/ '>F. Schaipp</a>, <a href='
-    https://guillaume-garrigos.com '>G. Garrigos</a>, <a href=' https://gowerrobert.github.io/
-    '>R. M. Gower</a> and <a href=' https://www.di.ens.fr/umut.simsekli/ '>U. Simeskli</a>
+    https://guillaume-garrigos.com '>G. Garrigos</a>, <a href=' https://www.di.ens.fr/umut.simsekli/
+    '>U. Simeskli</a> and <a href=' https://gowerrobert.github.io/ '>R. M. Gower</a>
   date: 2024-02-20
-  link-editor: null
+  link-editor: https://openreview.net/forum?id=WMxLEgYGxu
   link-slides: null
-  ref: null
-  status: preprint
+  ref: Transactions on Machine Learning Research, 2025.
+  status: accepted-journal
   title: Tracking the Median of Gradients with a Stochastic Proximal Point Method
 - arxiv: '2307.14528'
   author-list:
