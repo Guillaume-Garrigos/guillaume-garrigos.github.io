@@ -100,6 +100,22 @@ authors:
     name-html: <a href=' http://lcsl.mit.edu/data/silviavilla/Home.html '>S. Villa</a>
     website: http://lcsl.mit.edu/data/silviavilla/Home.html
 papers:
+- arxiv: '2507.14122'
+  author-list:
+  - Garrigos
+  - Cortild
+  - Ketels
+  - Peypouquet
+  authors: G. Garrigos, D. Cortild, L. Ketels and J. Peypouquet
+  authors-html: <a href=' https://guillaume-garrigos.com '>G. Garrigos</a>, <a href='
+    https://daniel.cortild.com/ '>D. Cortild</a>, L. Ketels and <a href=' https://sites.google.com/rug.nl/peypouquet
+    '>J. Peypouquet</a>
+  date: 2025-07-18
+  link-editor: null
+  link-slides: null
+  ref: null
+  status: preprint
+  title: Last-Iterate Complexity of SGD for Convex and Smooth Stochastic Problems
 - arxiv: '2505.17965'
   author-list:
   - Cortild
@@ -155,20 +171,20 @@ papers:
   title: Multivariate Online Linear Regression for Hierarchical Forecasting
 - arxiv: '2402.12828'
   author-list:
+  - Schaipp
   - Garrigos
   - Gower
   - Simsekli
-  - Schaipp
-  authors: G. Garrigos, R. M. Gower, U. Simeskli and F. Schaipp
-  authors-html: <a href=' https://guillaume-garrigos.com '>G. Garrigos</a>, <a href='
-    https://gowerrobert.github.io/ '>R. M. Gower</a>, <a href=' https://www.di.ens.fr/umut.simsekli/
-    '>U. Simeskli</a> and <a href=' https://fabian-sp.github.io/ '>F. Schaipp</a>
+  authors: F. Schaipp, G. Garrigos, R. M. Gower and U. Simeskli
+  authors-html: <a href=' https://fabian-sp.github.io/ '>F. Schaipp</a>, <a href='
+    https://guillaume-garrigos.com '>G. Garrigos</a>, <a href=' https://gowerrobert.github.io/
+    '>R. M. Gower</a> and <a href=' https://www.di.ens.fr/umut.simsekli/ '>U. Simeskli</a>
   date: 2024-02-20
   link-editor: null
   link-slides: null
   ref: null
   status: preprint
-  title: SGD with Clipping is Secretly Estimating the Median Gradient
+  title: Tracking the Median of Gradients with a Stochastic Proximal Point Method
 - arxiv: '2307.14528'
   author-list:
   - Garrigos
