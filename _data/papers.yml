@@ -134,12 +134,12 @@ papers:
     author-list:
       - Schaipp
       - Garrigos
-      - Gower
       - Simsekli
-    status: preprint
-    ref: 
+      - Gower
+    status: accepted-journal
+    ref: Transactions on Machine Learning Research, 2025.
     arxiv: '2402.12828'
-    link-editor: 
+    link-editor: https://openreview.net/forum?id=WMxLEgYGxu
     link-slides: 
 
   - date: 2023-07-26
