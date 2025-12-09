@@ -74,6 +74,19 @@ authors:
 
 papers:
   - 
+    date: 2025-07-18
+    title: "Last-Iterate Complexity of SGD for Convex and Smooth Stochastic Problems"
+    author-list: 
+      - Garrigos
+      - Cortild
+      - Ketels
+      - Peypouquet
+    status: preprint
+    ref : 
+    arxiv: '2507.14122'
+    link-editor:
+    link-slides: 
+  - 
     date: 2025-05-23
     title: "New Tight Bounds for SGD without Variance Assumption: A Computer-Aided Lyapunov Analysis"
     author-list: 
@@ -117,12 +130,12 @@ papers:
   
   -
     date: 2024-02-20
-    title: SGD with Clipping is Secretly Estimating the Median Gradient
+    title: Tracking the Median of Gradients with a Stochastic Proximal Point Method
     author-list:
+      - Schaipp
       - Garrigos
       - Gower
       - Simsekli
-      - Schaipp
     status: preprint
     ref: 
     arxiv: '2402.12828'
